@@ -1,0 +1,396 @@
+/* Base styles */
+body {
+    background-color: #212e73;
+    overflow-x: hidden;
+    font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 0.98em;
+}
+
+a {
+    color: #445587;
+}
+
+a:hover {
+    color: #2e4485;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.subsection {
+	margin-top: 0px;
+}
+
+.container {
+	padding: 10px;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+/* Navigation */
+#mainNav {
+    background-color: #212e73 !important;
+}
+
+#mainNav .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
+    background-color: #3f4e9b;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+#mainNav .navbar-brand {
+    color: white;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+#mainNav .navbar-brand.active,
+#mainNav .navbar-brand:active,
+#mainNav .navbar-brand:focus,
+#mainNav .navbar-brand:hover {
+    color: #D3AC2B;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 90%;
+    font-weight: 700;
+    padding: 0.5em 0.8em;
+    letter-spacing: 1px;
+    color: white;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #D3AC2B;
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+        transition: padding-top 0.3s, padding-bottom 0.3s;
+        border: none;
+        background-color: transparent;
+    }
+
+    #mainNav .navbar-brand {
+        font-size: 1.75em;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link {
+        padding: 1em 1em !important;
+    }
+
+    #mainNav.navbar-shrink {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #212e73 !important;
+    }
+
+    #mainNav.navbar-shrink .navbar-brand {
+        font-size: 1.25em;
+        padding: 10px 0;
+    }
+}
+
+/* Resume specific styles */
+.resume-intro {
+    padding: -10px 0;
+}
+
+.resume-intro img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.filter-buttons {
+    margin: 20px 50px;
+    text-align: center;
+}
+
+.btn-filter {
+    background: transparent;
+    border: 2px solid #57648C;
+    color: #212529;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btn-filter:hover, 
+.btn-filter.active {
+    background: #57648C;
+    color: white;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    margin-left: -265px;
+    content: '';
+    background-color: #e9ecef;
+}
+
+.timeline > li {
+    position: relative;
+    min-height: 170px;
+    margin-bottom: 100px;
+}
+
+.timeline > li .timeline-image {
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    width: 170px;
+    height: 170px;
+    margin-left: -350px;
+    border: 7px solid #e9ecef;
+    border-radius: 100%;
+    background-color: #ffffff;
+}
+
+.timeline > li .timeline-panel {
+    position: relative;
+    float: right;
+    width: 90%;
+    padding: 0 20px 0 120px;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.timeline > li .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline > li .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+    width: 90%;
+    padding: 0 20px 0 120px;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline-heading h4 {
+    margin: 5px 0;
+    color: inherit;
+}
+
+.timeline-heading h4.subheading {
+    font-size: 100%;
+    text-transform: none;
+}
+
+@media (min-width: 768px) {
+    .timeline > li .timeline-panel {
+        float: left;
+        width: 90%;
+        padding: 0 20px 0 120px;
+        text-align: right;
+        margin-left: 40px;
+    }
+
+    .timeline > li.timeline-inverted > .timeline-panel {
+        float: right;
+        padding: 0 20px 0 120px;
+        text-align: left;
+        margin-left: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    .timeline > li .timeline-panel {
+        padding: 0 20px 20px;
+    }
+
+    .timeline > li.timeline-inverted > .timeline-panel {
+        padding: 0 20px 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .timeline > li .timeline-panel {
+        padding: 0 20px 20px 100px;
+    }
+
+    .timeline > li.timeline-inverted > .timeline-panel {
+        padding: 0 100px 20px 300px;
+        margin-top: 0;
+    }
+}
+
+/* Content sections */
+.content-section {
+    padding-left: 120px;
+    margin: 20px 0;
+}
+
+.section-content {
+    padding-left: 100px;
+    padding-right: 100px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    padding: 25px 0;
+    text-align: center;
+    background-color: #212e73;
+}
+
+footer span.copyright {
+    font-size: 90%;
+    line-height: 40px;
+    text-transform: none;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+}
+
+footer ul.quicklinks {
+    font-size: 90%;
+    line-height: 40px;
+    margin-bottom: 0;
+    text-transform: none;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    background-color: #57648C;
+}
+
+ul.social-buttons {
+    margin-bottom: 0;
+    line-height: 50px;
+}
+
+ul.social-buttons li a {
+    font-size: 18px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color: white;
+    border-radius: 100%;
+    outline: none;
+    background-color: #57648C;
+}
+
+ul.social-buttons li a:active,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:hover {
+    background-color: #57648C;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hide-on-phone {
+        display: none;
+    }
+    
+    .timeline:before {
+        display: none;
+    }
+    
+    .timeline {
+        margin-top: -50px;
+        margin-left: -50px;
+    }
+    
+    .timeline-inverted {
+        margin-left: -50px;
+    }
+    
+    .resume-intro .col-md-4 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+/* Utility classes */
+.round-corner-large {
+    border-radius: 20px;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.subsection {
+    margin-top: 0px;
+}
+
+.intro-text {
+    text-align: left !important;
+}
+
+/* Keep the subsection headers centered */
+h4.subsection {
+    text-align: center;
+}
+
+/* Add or modify these styles */
+.timeline-panel p {
+    line-height: 1.8;  /* Adjust this value to increase/decrease line spacing */
+    margin-bottom: 10px;  /* Space between paragraphs */
+}
+
+/* For the list items within timeline */
+.timeline-panel ul li {
+    line-height: 1.8;  /* Same line spacing for list items */
+    margin-bottom: 8px;  /* Space between list items */
+}
