@@ -1,0 +1,382 @@
+/* Dark Mode Overrides for Resume and Blog pages */
+
+:root {
+    --bg-dark: #0f0f0f;
+    --card-dark: #1a1a1a;
+    --text-light: #f0f0f0;
+    --text-dim: #d3d3d3;
+    --accent: #de4c03;
+    --border-color: #333;
+}
+
+body {
+    background-color: var(--bg-dark) !important;
+    color: var(--text-light) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-light) !important;
+}
+
+p,
+li,
+span {
+    color: var(--text-dim);
+}
+
+a {
+    color: var(--accent) !important;
+}
+
+a:hover {
+    color: #fff !important;
+}
+
+/* Background overrides */
+.bg-white,
+.bg-light {
+    background-color: var(--bg-dark) !important;
+}
+
+.container,
+.container-fluid {
+    background-color: transparent !important;
+}
+
+/* Navigation - match Industrial */
+#mainNav {
+    background-color: rgba(15, 15, 15, 0.9) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--text-light) !important;
+}
+
+/* Resume Timeline */
+.timeline>li .timeline-image {
+    background-color: var(--card-dark) !important;
+    border: 7px solid var(--border-color) !important;
+}
+
+.timeline>li .timeline-panel {
+    background-color: var(--card-dark) !important;
+    border-radius: 15px;
+    padding: 20px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.timeline:before {
+    background-color: var(--border-color) !important;
+}
+
+/* Blog Specifics */
+.sidebar {
+    background-color: var(--card-dark) !important;
+    border-right: 1px solid var(--border-color) !important;
+}
+
+.blog-post {
+    background-color: var(--card-dark) !important;
+    color: var(--text-light) !important;
+    border: 1px solid var(--border-color);
+}
+
+.menu-section h3,
+.content h1 {
+    color: var(--text-light) !important;
+}
+
+.menu-section ul li a {
+    color: var(--text-dim) !important;
+}
+
+.menu-section ul li a:hover {
+    background-color: var(--border-color) !important;
+    color: #fff !important;
+}
+
+/* Buttons */
+.btn-filter {
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+    background-color: var(--accent) !important;
+    color: #000 !important;
+}
+
+/* Collapsible */
+.collapsible {
+    color: var(--text-light) !important;
+}
+
+.collapsible:hover {
+    background-color: var(--border-color) !important;
+}
+
+.content-collapse,
+.nested-section .content-collapse {
+    background-color: var(--card-dark) !important;
+    color: var(--text-dim) !important;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-dark) !important;
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* --- Shared Industrial Navigation Styles (Added) --- */
+.navbar-industrial {
+    padding: 20px 0;
+    background-color: transparent !important;
+    /* Override legacy */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    border-bottom: none !important;
+    /* Override dark-mode border */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-pills-container {
+    background: rgba(42, 42, 42, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 8px 10px;
+    border-radius: 50px;
+    display: flex;
+    gap: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link-ind {
+    color: #ccc !important;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 8px 18px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-link-ind:hover {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    text-decoration: none;
+}
+
+.nav-link-ind.active {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+/* Overrides for specific blog element styles */
+.intro-text {
+    color: var(--text-dim) !important;
+}
+
+/* === Vertical Experience List Layout (Matching About Page) === */
+.timeline.experience-list {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    max-width: 800px;
+    /* Match About page width */
+    margin: 0 auto;
+}
+
+/* Remove the central line */
+.timeline.experience-list:before {
+    display: none !important;
+}
+
+.experience-item {
+    display: flex;
+    gap: 20px;
+    /* Match About page gap */
+    margin-bottom: 50px;
+    /* Match About page space */
+    position: relative;
+    width: 100%;
+}
+
+/* Icon Styling */
+.experience-item .icon-container {
+    flex-shrink: 0;
+    width: 60px;
+    /* Match About page */
+    height: 60px;
+    /* Match About page */
+    background-color: #333;
+    /* Match About page */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    /* Removed border to match */
+}
+
+/* Image inside icon container (since Resume uses logos, not icons) */
+.experience-item .icon-container img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+/* Content Styling */
+.experience-item .content-container {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.experience-item .exp-title {
+    font-family: var(--font-display);
+    /* Use the nice display font */
+    font-size: 1.5rem;
+    /* Match h3 size usually */
+    font-weight: 700;
+    color: #fff;
+    /* Match About page */
+    margin: 0 0 5px 0;
+}
+
+.experience-item .exp-meta {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--accent);
+    /* Match About page accent color */
+    font-size: 0.9rem;
+    /* Match About page size */
+    margin-bottom: 10px;
+    /* Match About page margin */
+}
+
+.experience-item .exp-desc {
+    color: #ccc;
+    /* Match About page text color */
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Mobile Adjustments */
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+
+    /* --- Resume Adjustments --- */
+    .experience-item {
+        flex-direction: row;
+        /* Keep row for small icons if possible */
+        align-items: flex-start;
+    }
+
+    /* If screen is VERY small, maybe stack? But 60px icon is small enough. */
+    @media (max-width: 480px) {
+        .experience-item {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+    .experience-item .icon-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .experience-item .exp-title {
+        font-size: 1.3rem;
+    }
+
+    /* --- Blog Adjustments --- */
+    /* Stack the flex container */
+    .blog-container {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    /* Sidebar becomes top nav/menu */
+    .sidebar {
+        flex: none !important;
+        width: 100% !important;
+        height: auto !important;
+        border-right: none !important;
+        border-bottom: 1px solid var(--border-color);
+        padding: 15px !important;
+        overflow-y: visible !important;
+        /* Allow expansion */
+    }
+
+    /* Hide some menu items or make collapsible if too long? 
+       For now, just scrolling horizontally or wrapping might be better if many icons.
+       Or keep simple stacking. */
+    .menu-section {
+        margin-bottom: 20px !important;
+        padding-top: 10px !important;
+        padding-left: 0 !important;
+    }
+
+    /* Content takes full width below */
+    .content {
+        flex: none !important;
+        width: 100% !important;
+        height: auto !important;
+        /* Allow full page scroll */
+        padding: 20px !important;
+        overflow-y: visible !important;
+    }
+
+    /* Hide spacer */
+    .spacer {
+        display: none !important;
+    }
+
+    /* Adjust Intro Image size */
+    .intro-image {
+        width: 100% !important;
+    }
+
+    /* Navbar text size adjust */
+    .nav-link-ind {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    /* --- Text Sections (Grants, Scholarships) --- */
+    .content-section,
+    .section-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .section-content {
+        padding: 0 10px !important;
+        /* Minimal padding for readability */
+    }
+}
+
+/* Filter Buttons Cursor */
+.btn-filter {
+    cursor: pointer;
+}

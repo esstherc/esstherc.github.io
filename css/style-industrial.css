@@ -1,0 +1,514 @@
+/* Industrial Theme - Dark Mode */
+
+:root {
+    --bg-color: #0f0f0f;
+    --text-color: #f0f0f0;
+    --accent-color: #de4c03;
+    /* Industrial Orange */
+    --secondary-color: #2a2a2a;
+    --card-bg: #1a1a1a;
+    --font-display: 'Anton', 'Oswald', sans-serif;
+    --font-body: 'Montserrat', 'Inter', sans-serif;
+    --serif-font: 'Droid Serif', serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navigation - Same as before */
+.navbar-industrial {
+    padding: 20px 0;
+    background-color: transparent;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-pills-container {
+    background: rgba(42, 42, 42, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 8px 10px;
+    border-radius: 50px;
+    display: flex;
+    gap: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link-ind {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 8px 18px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+
+.nav-link-ind:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+}
+
+.nav-link-ind.active {
+    background-color: #333;
+    color: #fff;
+}
+
+/* COMPACT LAYOUT */
+.main-intro-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text-area {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-supertext {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 9vw, 8rem);
+    /* Reduced max size */
+    line-height: 1.1;
+    /* Increased spacing */
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+    letter-spacing: -2px;
+}
+
+.hero-subtext {
+    font-family: var(--serif-font);
+    font-style: italic;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    font-weight: 300;
+    color: #aaa;
+}
+
+/* Split Section for Photo & Chat */
+.intro-split-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Profile Card */
+.profile-card-container {
+    width: 300px;
+    height: 380px;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.profile-card-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 20px;
+    color: white;
+}
+
+/* Dynamic Chat */
+.chat-container {
+    flex: 1;
+    max-width: 600px;
+    min-width: 300px;
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Fix: Start from top */
+    gap: 15px;
+    padding: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.bubble-row {
+    display: flex;
+    width: 100%;
+    /* Removed CSS animation here, will control via JS for typing sequence */
+    /* opacity: 0; REMOVED for visibility fallback */
+    /* transform: translateY(20px); REMOVED */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.bubble-row.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bubble-row.left {
+    justify-content: flex-start;
+}
+
+.bubble-row.right {
+    justify-content: flex-end;
+}
+
+.chat-bubble {
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    max-width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Swapped Colors per request: Question (Left) = White/Grey, Answer (Right) = Dark */
+.chat-bubble.left {
+    background-color: #f0f0f0;
+    color: #000;
+    border-bottom-left-radius: 5px;
+}
+
+.chat-bubble.right {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-bottom-right-radius: 5px;
+}
+
+.bubble-row:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.bubble-row:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+.bubble-row:nth-child(3) {
+    animation-delay: 2.5s;
+}
+
+.bubble-row:nth-child(4) {
+    animation-delay: 3.8s;
+}
+
+.bubble-row:nth-child(5) {
+    animation-delay: 5.0s;
+}
+
+.bubble-row:nth-child(6) {
+    animation-delay: 6.2s;
+}
+
+.bubble-row:nth-child(7) {
+    animation-delay: 7.5s;
+}
+
+.bubble-row:nth-child(8) {
+    animation-delay: 8.8s;
+}
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* WORK SECTION Updates for "Ghost Text" */
+.work-section {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-title-wrap {
+    text-align: center;
+    margin-bottom: 120px;
+    /* Increased margin to fit ghost text */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Ghost Text Background */
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 15vw, 12rem);
+    color: rgba(255, 255, 255, 0.03);
+    /* Very faint */
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Foreground Subtitle */
+.section-subtitle {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    max-width: 600px;
+    margin-top: 50px;
+    font-weight: 300;
+}
+
+
+/* Stacking Cards */
+.project-card {
+    background-color: #e8f5e9;
+    border-radius: 30px;
+    padding: 40px;
+    margin-bottom: 100px;
+    color: #111;
+    overflow: hidden;
+    position: sticky;
+    top: 100px;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.project-card:nth-child(odd) {
+    transform: rotate(-1deg);
+}
+
+.project-card:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.project-card:hover {
+    transform: scale(1.02) rotate(0deg);
+}
+
+.project-card.purple {
+    background-color: #f3e5f5;
+}
+
+.project-card.orange {
+    background-color: #ffe0b2;
+}
+
+.project-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.project-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.project-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    margin-bottom: 15px;
+    line-height: 1;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.project-image {
+    flex: 1.5;
+    min-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.meta-item h5 {
+    color: #555;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+/* Footer */
+footer {
+    padding: 50px 0;
+    border-top: 1px solid #222;
+    text-align: center;
+    color: #666;
+    margin-bottom: 100px;
+}
+
+/* ABOUT PAGE: BENTO GRID & GHOST HERO */
+.about-hero {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-top: 100px;
+    margin-bottom: 50px;
+}
+
+.ghost-text-huge {
+    font-family: var(--font-display);
+    font-size: clamp(5rem, 20vw, 15rem);
+    color: linear-gradient(to bottom, transparent, #000);
+    /* Gradient fade? Or just opacity */
+    background: -webkit-linear-gradient(#222, #0f0f0f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.about-intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Bento Grid */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    /* 2 rows height */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.bento-item {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.bento-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Specific Bento Placements */
+.bento-item.tall {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.bento-item.wide {
+    grid-column: span 8;
+    grid-row: span 1;
+}
+
+.bento-item.medium {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+/* Mobile Tweaks */
+@media (max-width: 768px) {
+    .main-intro-wrapper {
+        padding-top: 100px;
+        height: auto;
+        min-height: auto;
+    }
+
+    .intro-split-section {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .profile-card-container {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+    }
+
+    .chat-container {
+        height: auto;
+    }
+
+    .project-card {
+        top: 80px;
+        margin-bottom: 50px;
+        padding: 25px;
+    }
+
+    .project-content {
+        flex-direction: column-reverse;
+    }
+
+    .bento-grid {
+        display: flex;
+        flex-direction: column;
+        grid-template-rows: auto;
+    }
+
+    .bento-item {
+        height: 300px;
+        width: 100%;
+    }
+}
