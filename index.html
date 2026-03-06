@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <meta name="description" content="Portfolio of Yanbing Chen - Spatial UI/UX Designer">
     <meta name="author" content="Yanbing Chen">
-    <title>Yanbing Chen | Spatial UI/UX Designer</title>
+    <title>Selected Works | Yanbing Chen</title>
 
     <!-- Bootstrap -->
     <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -23,6 +23,12 @@
     <!-- Industrial Styles -->
     <link href="css/style-industrial.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/icon.png">
+
+    <style>
+        .filter-hidden {
+            display: none !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,191 +36,173 @@
     <!-- Navigation -->
     <nav class="navbar-industrial">
         <div class="nav-container">
+            <a href="index.html" class="nav-brand">Yanbing Chen</a>
             <div class="nav-pills-container">
-                <a href="index.html" class="nav-link-ind active">Home</a>
-                <a href="https://yanbing-chen-research.notion.site/portfolio?v=1191644e076f81b085bc000c36b8c7b3&p=14e1644e076f806bb8e6e7e34c3278d6&pm=c"
-                    class="nav-link-ind">Portfolio</a>
+                <a href="about.html" class="nav-link-ind">About</a>
+                <a href="index.html" class="nav-link-ind active">Portfolio</a>
+                <a href="https://yanbing-chen-research.notion.site/portfolio?v=1191644e076f81b085bc000c36b8c7b3"
+                    target="_blank" class="nav-link-ind">Visual Projects</a>
                 <a href="resume.html" class="nav-link-ind">Resume</a>
-                <a href="blog.html" class="nav-link-ind">Blog</a>
             </div>
         </div>
     </nav>
 
-    <!-- MAIN INTRO WRAPPER (Hero + Profile + Chat) -->
-    <main class="main-intro-wrapper">
-
-        <!-- Top Half: Hero Text -->
-        <div class="hero-text-area">
-            <h6 class="text-muted" style="letter-spacing: 3px; margin-top: 30px; margin-bottom: 20px;">Fueled by
-                User-Centered
-                Studies and Spatial Thinking</h6>
-            <h3 class="hero-supertext">SPATIAL INTERFACE DESIGNER<br></h3>
-            <p class="hero-subtext">Blending <em>User-Centered Design, Data Visualization & Cartography</em></p>
+    <!-- Hero Section -->
+    <header class="about-hero" style="min-height: 40vh; margin-bottom: 20px; padding-top: 150px;">
+        <div class="about-intro-text">
+            <h1
+                style="font-family: var(--font-display); font-size: 4rem; font-weight: 700; color: var(--text-color); margin-bottom: 15px; letter-spacing: -1px;">
+                Selected Works
+            </h1>
+            <p style="font-size: 1.4rem; color: var(--secondary-color); font-weight: 300;">
+                Designing spatial experiences that balance complex data, user needs, and business goals.
+            </p>
         </div>
+    </header>
 
-        <!-- Bottom Half: Profile & Chat -->
-        <div class="intro-split-section">
+    <!-- Portfolio Filters -->
+    <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="ux">UX Research & Design</button>
+        <button class="filter-btn" data-filter="dataviz">Data Visualization</button>
+        <button class="filter-btn" data-filter="strategy">Product Strategy</button>
+    </div>
 
-            <!-- Left: Profile Image -->
-            <div class="profile-card-container">
-                <img src="assets/profile_yanbing.jpg" alt="Yanbing Chen">
-                <div class="profile-overlay">
-                    <h4 style="margin:0; font-family:var(--font-display); font-weight: 700; letter-spacing:1px;">YANBING
-                        CHEN</h4>
-                    <p style="margin:0; font-size:0.9rem; opacity:0.8;">Madison, WI</p>
-                </div>
-            </div>
-
-            <!-- Right: Dynamic Chat -->
-            <div class="chat-container">
-
-                <!-- 1. Who's Yanbing? -->
-                <div class="bubble-row left">
-                    <div class="chat-bubble left">Who's Yanbing?</div>
-                </div>
-                <div class="bubble-row right">
-                    <div class="chat-bubble right">A Spatial UI/UX Designer & Cartographer. 🗺️</div>
-                </div>
-
-                <!-- 2. What do you bring? -->
-                <div class="bubble-row left">
-                    <div class="chat-bubble left">What do you bring to the table?</div>
-                </div>
-                <div class="bubble-row right">
-                    <div class="chat-bubble right">Clarity in complex data. I bridge the gap between technical spatial
-                        analysis and intuitive, user-centered design.</div>
-                </div>
-
-                <!-- 3. Experience? -->
-                <div class="bubble-row left">
-                    <div class="chat-bubble left">Love that. Experience?</div>
-                </div>
-                <div class="bubble-row right">
-                    <div class="chat-bubble right">Research at UW-Madison CartLab, GIS Specialist at McGill, and
-                        industrial design projects for complex systems.</div>
-                </div>
-
-                <!-- 4. Team player? -->
-                <div class="bubble-row left">
-                    <div class="chat-bubble left">Team player vibes?</div>
-                </div>
-                <div class="bubble-row right">
-                    <div class="chat-bubble right">Always! I work seamlessly with engineering and product teams to ship
-                        scalable designs.</div>
-                </div>
-
-                <!-- 5. Excited areas? -->
-                <div class="bubble-row left">
-                    <div class="chat-bubble left">Any areas you're excited about?</div>
-                </div>
-                <div class="bubble-row right">
-                    <div class="chat-bubble right">User-Centered Design, Spatial Visualization, and making location
-                        intelligence
-                        accessible to everyone!</div>
-                </div>
-
-            </div>
-        </div>
-    </main>
-
-
-    <!-- Selected Work Section (Sticky Stack) -->
-    <section class="work-section">
-        <div class="section-title-wrap">
-            <div class="section-title">Selected Work</div>
-            <div class="section-subtitle">From static maps to interactive systems, these projects show how I combine
-                spatial analysis and design craft.</div>
-        </div>
+    <!-- Portfolio Grid -->
+    <main class="portfolio-grid" id="portfolioGrid" style="margin-bottom: 120px;">
 
         <!-- Project 1 -->
-        <div class="project-card">
-            <div class="project-content">
-                <div class="project-info">
-                    <h2 class="project-title">Van Gogh Style Basemap</h2>
-                    <p class="project-desc">
-                        A custom basemap style based on Van Gogh's style, created using Mapbox.
-                    </p>
-                    <a href="https://yanbingchen.site/Van-Gogh-Style-Basemap/explainer/" target="_blank"
-                        class="btn-view">View Project</a>
-
-                    <div class="project-meta">
-                        <div class="meta-item">
-                            <h5>Role</h5>
-                            <span>UI Designer</span>
-                        </div>
-                        <div class="meta-item">
-                            <h5>Focus</h5>
-                            <span>Web & Map Design</span>
-                        </div>
+        <article class="gallery-card dataviz">
+            <div class="gallery-img-wrap">
+                <img src="assets/neotoma.png" alt="Taxonomy Visualization">
+            </div>
+            <div class="gallery-content">
+                <div class="gallery-category">Data Visualization</div>
+                <h3 class="gallery-title">Taxonomy Visualization System</h3>
+                <p class="gallery-desc">
+                    Navigated deep ambiguity to transform 60,000+ paleoecological records into a scalable hierarchical
+                    interface. Balanced browser rendering limitations with the user's need to quickly identify taxonomic
+                    lineages.
+                </p>
+                <div class="gallery-meta">
+                    <div class="meta-block">
+                        <h6>Role</h6>
+                        <p>UX Designer</p>
+                    </div>
+                    <div class="meta-block" style="text-align: right;">
+                        <h6>Impact</h6>
+                        <p>Enhanced Data Discovery</p>
                     </div>
                 </div>
-                <div class="project-image">
-                    <img src="assets/van-gogh.png" alt="Van Gogh Style Basemap"
-                        style="object-fit: cover; width: 100%; height: 350px;">
-                </div>
             </div>
-        </div>
+        </article>
 
         <!-- Project 2 -->
-        <div class="project-card purple">
-            <div class="project-content">
-                <div class="project-info">
-                    <h2 class="project-title">International Students in the U.S.</h2>
-                    <p class="project-desc">
-                        A Storymap exploring the experiences of current international students in the U.S. due to policy
-                        changes.
-                    </p>
-                    <a href="https://storymaps.arcgis.com/stories/7d7c10f4b739409da8b402761bdb4c2a"
-                        class="btn-view">View Project</a>
-
-                    <div class="project-meta">
-                        <div class="meta-item">
-                            <h5>Role</h5>
-                            <span>Designer and Developer</span>
-                        </div>
-                        <div class="meta-item">
-                            <h5>Focus</h5>
-                            <span>Storytelling and Interaction Design</span>
-                        </div>
+        <article class="gallery-card strategy">
+            <div class="gallery-img-wrap" style="background: #254DE9; padding: 20px;">
+                <!-- Fallback to a solid background and logo if project photo is missing, keeping a premium look -->
+                <img src="assets/van-gogh.png" alt="GISphere" style="object-fit: cover; opacity: 0.9;">
+            </div>
+            <div class="gallery-content">
+                <div class="gallery-category">Product Strategy</div>
+                <h3 class="gallery-title">GISphere Knowledge Platform</h3>
+                <p class="gallery-desc">
+                    Led the strategic redesign of a global geospatial knowledge hub. Prioritized core features under
+                    tight PM milestones to drive user retention and streamline navigation for over 10,000 spatial
+                    scientists.
+                </p>
+                <div class="gallery-meta">
+                    <div class="meta-block">
+                        <h6>Role</h6>
+                        <p>Product Designer</p>
+                    </div>
+                    <div class="meta-block" style="text-align: right;">
+                        <h6>Impact</h6>
+                        <p>10k+ Global Users</p>
                     </div>
                 </div>
-                <div class="project-image">
-                    <img src="assets/international-student.png" alt="Storymap about International Students"
-                        style="object-fit: cover; width: 100%; height: 350px;">
-                </div>
             </div>
-        </div>
+        </article>
 
         <!-- Project 3 -->
-        <div class="project-card orange">
-            <div class="project-content">
-                <div class="project-info">
-                    <h2 class="project-title">Paleoecological Taxonomy Visualization</h2>
-                    <p class="project-desc">
-                        A visualization tool for 60000+ paleoecological taxonomy.
-                    </p>
-                    <a href="https://yanbingchen.site/Neotoma-Visualizer/" class="btn-view">View Details</a>
-
-                    <div class="project-meta">
-                        <div class="meta-item">
-                            <h5>Role</h5>
-                            <span>Researcher</span>
-                        </div>
-                        <div class="meta-item">
-                            <h5>Focus</h5>
-                            <span>Visual Design and Analytics</span>
-                        </div>
+        <article class="gallery-card ux">
+            <div class="gallery-img-wrap" style="background: #F4F6F8;">
+                <img src="assets/logo_orka.png" alt="Orka AI" style="object-fit: contain; padding: 40px;">
+            </div>
+            <div class="gallery-content">
+                <div class="gallery-category">UX Research & Design</div>
+                <h3 class="gallery-title">Orka AI-Hearing Aid</h3>
+                <p class="gallery-desc">
+                    Conducted rigorous usability studies and think-aloud protocols for clinical workflows. Bridged the
+                    gap between hardware engineering constraints and patient accessibility needs to decrease support
+                    overhead.
+                </p>
+                <div class="gallery-meta">
+                    <div class="meta-block">
+                        <h6>Role</h6>
+                        <p>UX Researcher</p>
+                    </div>
+                    <div class="meta-block" style="text-align: right;">
+                        <h6>Impact</h6>
+                        <p>Accessible Clinical UI</p>
                     </div>
                 </div>
-                <div class="project-image">
-                    <img src="assets/neotoma.png" alt="Paleoecological Taxonomy Visualization"
-                        style="object-fit: cover; width: 100%; height: 350px;">
+            </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="gallery-card dataviz">
+            <div class="gallery-img-wrap">
+                <img src="assets/international-student.png" alt="Multiscale Heatmap">
+            </div>
+            <div class="gallery-content">
+                <div class="gallery-category">Data Visualization</div>
+                <h3 class="gallery-title">Multiscale Heatmap Exploration</h3>
+                <p class="gallery-desc">
+                    Designed interactive geographic heatmaps to surface actionable insights from dense datasets. Shifted
+                    away from standard templates to create custom visual hierarchies that stakeholders could easily
+                    interpret.
+                </p>
+                <div class="gallery-meta">
+                    <div class="meta-block">
+                        <h6>Role</h6>
+                        <p>Cartographer & UX</p>
+                    </div>
+                    <div class="meta-block" style="text-align: right;">
+                        <h6>Impact</h6>
+                        <p>Actionable Analytics</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </article>
 
-    </section>
+        <!-- Project 5 -->
+        <article class="gallery-card strategy ux">
+            <div class="gallery-img-wrap">
+                <img src="assets/geog370-final-project.png" alt="Wisconsin Car Crash Dashboard">
+            </div>
+            <div class="gallery-content">
+                <div class="gallery-category">Product Strategy</div>
+                <h3 class="gallery-title">Wisconsin Car Crash Dashboard</h3>
+                <p class="gallery-desc">
+                    Transformed chaotic state-level crash data into an intuitive analytical dashboard. Facilitated
+                    alignment between state agencies and dev teams to ensure the final product directly supported policy
+                    decision-making.
+                </p>
+                <div class="gallery-meta">
+                    <div class="meta-block">
+                        <h6>Role</h6>
+                        <p>Lead Designer</p>
+                    </div>
+                    <div class="meta-block" style="text-align: right;">
+                        <h6>Impact</h6>
+                        <p>Policy Alignment</p>
+                    </div>
+                </div>
+            </div>
+        </article>
 
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -229,12 +217,40 @@
         </div>
     </footer>
 
-
     <!-- Scripts -->
     <script src="libs/bootstrap/jquery.min.js"></script>
     <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
 
+    <script>
+        // Simple filter logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.gallery-card');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active from all buttons
+                    buttons.forEach(b => b.classList.remove('active'));
+                    // Add active to clicked
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    cards.forEach(card => {
+                        if (filter === 'all') {
+                            card.classList.remove('filter-hidden');
+                        } else {
+                            if (card.classList.contains(filter)) {
+                                card.classList.remove('filter-hidden');
+                            } else {
+                                card.classList.add('filter-hidden');
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

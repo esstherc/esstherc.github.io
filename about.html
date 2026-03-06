@@ -23,6 +23,17 @@
     <!-- Industrial Styles -->
     <link href="css/style-industrial.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/icon.png">
+    <style>
+        .hero-bullets {
+            text-align: left;
+            margin: 30px auto 0;
+            max-width: 600px;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,114 +41,151 @@
     <!-- Navigation -->
     <nav class="navbar-industrial">
         <div class="nav-container">
+            <a href="index.html" class="nav-brand">Yanbing Chen</a>
             <div class="nav-pills-container">
-                <a href="index.html" class="nav-link-ind">Home</a>
+                <a href="about.html" class="nav-link-ind active">About</a>
+                <a href="index.html" class="nav-link-ind">Portfolio</a>
                 <a href="https://yanbing-chen-research.notion.site/portfolio?v=1191644e076f81b085bc000c36b8c7b3&p=14e1644e076f806bb8e6e7e34c3278d6&pm=c"
-                    class="nav-link-ind">Portfolio</a>
+                    target="_blank" class="nav-link-ind">Visual Projects</a>
                 <a href="resume.html" class="nav-link-ind">Resume</a>
-                <a href="blog.html" class="nav-link-ind">Blog</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="about-hero">
-        <h1 class="ghost-text-huge">Beyond Yanbing</h1>
+    <!-- Hero Section (Identity) -->
+    <section class="about-hero" style="padding-top: 150px;">
+        <h1 class="ghost-text-huge" style="top: 40%;">Hello</h1>
         <div class="about-intro-text">
-            <p style="font-size: 1.5rem; margin-bottom: 20px;">
-                Travel has always been my way of understanding people. Every place teaches me something new about
-                culture, emotion, and connection.
+            <p
+                style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; color: var(--text-color); margin-bottom: 20px; line-height: 1.3;">
+                I am a spatial UX researcher, designer, cartographer, and creative problem-solver.
             </p>
-            <p style="color: #666666;">
-                My passion for exploration fuels my creativity and helps me design with a more open, empathetic
-                perspective.
-            </p>
+
+            <ul class="hero-bullets">
+                <li><strong>3+ years</strong> designing interactive tools for complex spatial and scientific data.</li>
+                <li><strong>Interdisciplinary background</strong> across UX research, data visualization, Spatial
+                    Science and
+                    Finance.</li>
+                <li><strong>Experienced</strong> in usability studies, think-aloud protocols, mouse-tracking analysis,
+                    and visualization design for analytical workflows.</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Bento Grid Gallery -->
-    <section class="bento-grid-section">
-        <div class="bento-grid">
-            <!-- Large Portrait Item -->
-            <div class="bento-item tall">
-                <img src="assets/profile_yanbing.jpg" alt="Yanbing Chen">
+    <!-- Horizontal Scroll Gallery (Visuals/Projects) -->
+    <section class="horizontal-scroll-section">
+        <div class="scroll-container">
+            <!-- Item 1 -->
+            <div class="scroll-item">
+                <img src="assets/van-gogh.png" alt="Cartography">
+                <div class="scroll-caption">
+                    <h3>Cartography Craft</h3>
+                    <p>Blending art with spatial data.</p>
+                </div>
             </div>
 
-            <!-- Landscape Item -->
-            <div class="bento-item wide">
-                <img src="assets/london_street.jpg" alt="Travels">
+            <!-- Item 2 -->
+            <div class="scroll-item">
+                <img src="assets/neotoma.png" alt="Data Viz">
+                <div class="scroll-caption">
+                    <h3>Complex Data Visualization</h3>
+                    <p>Making 60,000+ records accessible.</p>
+                </div>
             </div>
 
-            <!-- Two Smaller Items -->
-            <div class="bento-item medium">
-                <img src="assets/uw_geog_club.png" alt="Community">
+            <!-- Item 3 -->
+            <div class="scroll-item">
+                <img src="assets/international-student.png" alt="UX Research">
+                <div class="scroll-caption">
+                    <h3>UX Research & Dashboards</h3>
+                    <p>Focusing on true user goals.</p>
+                </div>
             </div>
-            <div class="bento-item medium">
-                <img src="assets/logo_gisphere.png" alt="Projects">
+
+            <!-- Item 4 -->
+            <div class="scroll-item">
+                <img src="assets/logo_gisphere.png" alt="Product Strategy">
+                <div class="scroll-caption">
+                    <h3>Product Strategy</h3>
+                    <p>Driving retention through focused IA.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Career Timeline (Simplified) -->
-    <section class="work-section" style="padding-top: 50px;">
-        <div class="section-title-wrap">
-            <div class="section-title" style="font-size: 8rem; opacity: 0.05;">Journeys</div>
-            <div class="section-subtitle">My career so far</div>
+    <!-- My Philosophy Section -->
+    <section class="philosophy-section">
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; margin-bottom: 20px;">Here's a
+            little about how I work.</h2>
+        <p
+            style="font-size: 1.2rem; color: var(--secondary-color); line-height: 1.6; margin-bottom: 40px; font-weight: 300;">
+            Across research labs, tech startups, and complex spatial systems, I’ve led UX research and product design to
+            turn abstract geospatial algorithms and clinical workflows into accessible tools.
+        </p>
+
+        <div class="philosophy-row">
+            <!-- Tip: You can replace this FontAwesome icon with your own hand-drawn illustration <img> later -->
+            <div class="philosophy-visual">
+                <i class="fas fa-layer-group viz-icon" style="color: #4F6EF7;"></i>
+            </div>
+            <div class="philosophy-text">
+                My purpose in design is to <strong>create order out of chaos</strong>. I crave complexity and love to
+                tame it into intuitive interfaces.
+            </div>
         </div>
 
-        <div class="container" style="max-width: 800px; margin: 0 auto; color: #ccc;">
-            <!-- Timeline Item 1 -->
-            <div style="margin-bottom: 50px; display: flex; gap: 20px;">
-                <div
-                    style="width: 60px; height: 60px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                    <i class="fas fa-university" style="color: #fff; font-size: 1.5rem;"></i>
-                </div>
-                <div>
-                    <h3 style="margin-bottom: 5px; color: #222222; font-family: var(--font-display); font-weight: 600;">
-                        M.S. Cartography & GIS</h3>
-                    <div style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 10px;">UW-Madison | 2023 -
-                        Present</div>
-                    <p style="color: #666666;">Focusing on interactive cartography, UI/UX for spatial data, and visual
-                        analytics.</p>
-                </div>
+        <div class="philosophy-row">
+            <div class="philosophy-visual">
+                <i class="fas fa-search viz-icon" style="color: #FF9F1C;"></i>
             </div>
-
-            <!-- Timeline Item 2 -->
-            <div style="margin-bottom: 50px; display: flex; gap: 20px;">
-                <div
-                    style="width: 60px; height: 60px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                    <i class="fas fa-briefcase" style="color: #fff; font-size: 1.5rem;"></i>
-                </div>
-                <div>
-                    <h3 style="margin-bottom: 5px; color: #222222; font-family: var(--font-display); font-weight: 600;">
-                        GIS Specialist</h3>
-                    <div style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 10px;">McGill University |
-                        2021 - 2023</div>
-                    <p style="color: #666666;">Supported research labs with spatial analysis, map production, and data
-                        management.</p>
-                </div>
+            <div class="philosophy-text">
+                I dive into <strong>real, messy user journeys</strong> rather than relying on perfect personas. I use
+                design research to strip down assumptions and define a true Information Architecture: uncovering
+                <em>what</em> we should build, and <em>why</em>.
             </div>
-
         </div>
+
+        <div class="philosophy-row">
+            <div class="philosophy-visual">
+                <i class="fas fa-map-marked-alt viz-icon" style="color: #2EC4B6;"></i>
+            </div>
+            <div class="philosophy-text">
+                I <strong>visualize</strong> complex ecosystems. As a data viz enthusiast, I turn abstract data into
+                clear
+                visual hierarchies to help engineering and product stakeholders build a common understanding.
+            </div>
+        </div>
+
+        <div class="philosophy-row">
+            <div class="philosophy-visual">
+                <i class="fas fa-project-diagram viz-icon" style="color: #E71D36;"></i>
+            </div>
+            <div class="philosophy-text">
+                You might say I’m a designer with a PM bent; I spend lots of time <strong>listening and
+                    facilitating</strong> to balance user needs, dev constraints, and project goals, ensuring we design
+                beautifully while actually driving retention and conversion.
+            </div>
+        </div>
+
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="social-icons">
+            <div class="social-icons" style="margin-bottom: 15px;">
                 <a href="mailto:yanbing.chen@wisc.edu"><i class="fa fa-envelope"></i></a>
                 <a href="https://github.com/esstherc"><i class="fab fa-github"></i></a>
                 <a href="https://x.com/Essstherccc"><i class="fab fa-x-twitter"></i></a>
                 <a href="https://www.linkedin.com/in/yanbingc/"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <p style="margin-top: 20px; color: #666;">Copyright © 2024 Yanbing Chen.</p>
+            <p style="margin-top: 20px; color: #666;">Copyright © 2026 Yanbing Chen.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="libs/bootstrap/jquery.min.js"></script>
     <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script> <!-- Ensure this handles nav active state if needed -->
+    <script src="js/main.js"></script>
 
 </body>
 

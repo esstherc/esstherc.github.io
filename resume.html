@@ -4,28 +4,36 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-	<meta name="description" content="Web Portfolio of Yanbing Chen">
+	<meta name="description" content="About Yanbing Chen - Spatial Designer">
 	<meta name="author" content="Yanbing Chen">
-	<title>My MapBing Story</title>
+	<title>About | Yanbing Chen</title>
 
 	<!-- Bootstrap -->
 	<link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Fonts -->
-	<link
-		href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap"
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap"
 		rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
 	<!-- Fontawesome -->
 	<link href="libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
 	<link href="libs/fontawesome/css/brands.min.css" rel="stylesheet" />
 	<link href="libs/fontawesome/css/solid.min.css" rel="stylesheet" />
 
-	<!-- Custom styles -->
-	<link href="css/style-resume.css" rel="stylesheet">
-	<link href="css/dark-mode.css" rel="stylesheet">
+	<!-- Industrial Styles -->
+	<link href="css/style-industrial.css" rel="stylesheet">
 	<link rel="shortcut icon" href="assets/icon.png">
+	<style>
+		.hero-bullets {
+			text-align: left;
+			margin: 30px auto 0;
+			max-width: 600px;
+			font-size: 1.1rem;
+			color: var(--secondary-color);
+			line-height: 1.8;
+			padding-left: 20px;
+		}
+	</style>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -38,18 +46,18 @@
 	gtag('config', 'G-7N1ZQRZ0PH');
 </script>
 
-<body id="page-top">
+<body>
 
-	<!-- Navigation -->
 	<!-- Navigation -->
 	<nav class="navbar-industrial">
 		<div class="nav-container">
+			<a href="index.html" class="nav-brand">Yanbing Chen</a>
 			<div class="nav-pills-container">
-				<a href="index.html" class="nav-link-ind">Home</a>
+				<a href="about.html" class="nav-link-ind active">About</a>
+				<a href="index.html" class="nav-link-ind">Portfolio</a>
 				<a href="https://yanbing-chen-research.notion.site/portfolio?v=1191644e076f81b085bc000c36b8c7b3&p=14e1644e076f806bb8e6e7e34c3278d6&pm=c"
-					class="nav-link-ind">Portfolio</a>
-				<a href="resume.html" class="nav-link-ind active">Resume</a>
-				<a href="blog.html" class="nav-link-ind">Blog</a>
+					target="_blank" class="nav-link-ind">Visual Projects</a>
+				<a href="resume.html" class="nav-link-ind">Resume</a>
 			</div>
 		</div>
 	</nav>
@@ -81,7 +89,7 @@
 								<div class="team-member">
 									<p class="text-muted intro-text">
 										<br><br>
-										My name is Yanbing Chen(陈彦冰). I am a Second Year M.S. + Ph.D. student in
+										My name is Yanbing Chen(陈彦冰). I am a Ph.D. student in
 										Department
 										of Geography at University of Wisconsin-Madison. I am a graduate student member
 										of
@@ -93,7 +101,8 @@
 									</p>
 
 									<p class="text-muted intro-text">
-										My academic and professional interests lie in the intersection of GIScience,
+										My academic and professional interests lie in the intersection of UI/UX
+										Research,
 										Cartography,
 										and Data Visualization.
 										<br><br>
@@ -342,6 +351,33 @@
 
 	<!-- Custom scripts for this template -->
 	<script src="js/main.js"></script>
+
+	<!-- Resume Filter Logic -->
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const filterBtns = document.querySelectorAll('.filter-buttons .btn-filter');
+			const experienceItems = document.querySelectorAll('.timeline.experience-list > li');
+
+			filterBtns.forEach(btn => {
+				btn.addEventListener('click', () => {
+					// Remove active class from all buttons
+					filterBtns.forEach(b => b.classList.remove('active'));
+					// Add active class to clicked button
+					btn.classList.add('active');
+
+					const filterValue = btn.getAttribute('data-filter');
+
+					experienceItems.forEach(item => {
+						if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+							item.style.display = 'flex';
+						} else {
+							item.style.display = 'none';
+						}
+					});
+				});
+			});
+		});
+	</script>
 </body>
 
 </html>
