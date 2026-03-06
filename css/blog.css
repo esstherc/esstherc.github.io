@@ -1,8 +1,9 @@
 /* Base styles */
 body {
-    background-color: #212e73;
+    background-color: #FAFAFA;
     overflow-x: hidden;
-    font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
+    color: #222222;
 }
 
 p {
@@ -11,7 +12,7 @@ p {
 }
 
 a {
-    color: #445587;
+    color: #4F6EF7;
 }
 
 a:hover {
@@ -20,7 +21,7 @@ a:hover {
 }
 
 .bg-white {
-    background-color: white;
+    background-color: transparent;
     min-height: calc(100vh - 150px);
     margin: 0;
     padding: 0;
@@ -38,7 +39,8 @@ a:hover {
 
 /* Navigation */
 #mainNav {
-    background-color: #212e73 !important;
+    background-color: #FAFAFA !important;
+    border-bottom: 1px solid #EAEAEA;
 }
 
 #mainNav .navbar-toggler {
@@ -46,36 +48,36 @@ a:hover {
     right: 0;
     padding: 10px;
     text-transform: uppercase;
-    color: white;
+    color: #222222;
     border: 0;
-    background-color: #3f4e9b;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    background-color: transparent;
+    font-family: 'Inter', sans-serif;
 }
 
 #mainNav .navbar-brand {
-    color: white;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    color: #222222;
+    font-family: 'Inter', sans-serif;
 }
 
 #mainNav .navbar-brand.active,
 #mainNav .navbar-brand:active,
 #mainNav .navbar-brand:focus,
 #mainNav .navbar-brand:hover {
-    color: #D3AC2B;
+    color: #4F6EF7;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 90%;
-    font-weight: 700;
+    font-weight: 500;
     padding: 0.5em 0.8em;
     letter-spacing: 1px;
-    color: white;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    color: #666666;
+    font-family: 'Inter', sans-serif;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #D3AC2B;
+    color: #4F6EF7;
 }
 
 @media (min-width: 992px) {
@@ -101,7 +103,7 @@ a:hover {
     #mainNav.navbar-shrink {
         padding-top: 5px;
         padding-bottom: 5px;
-        background-color: #212e73 !important;
+        background-color: #FAFAFA !important;
     }
 
     #mainNav.navbar-shrink .navbar-brand {
@@ -114,10 +116,12 @@ a:hover {
 footer {
     padding: 25px 0;
     text-align: center;
-    background-color: #212e73;
+    background-color: #FAFAFA;
+    border-top: 1px solid #EAEAEA;
 }
 
 footer span.copyright {
+    color: #666666;
     font-size: 90%;
     line-height: 40px;
 }
@@ -142,11 +146,11 @@ footer span.copyright {
 /* Sidebar - 25% width */
 .sidebar {
     flex: 0 0 25%;
-    background-color: white;
+    background-color: #FFFFFF;
     padding: 20px;
     height: calc(100vh - 150px);
     overflow-y: auto;
-    border-right: 0.3px solid #35385a;
+    border-right: 1px solid #EAEAEA;
 }
 
 /* Spacer - 8% width */
@@ -170,13 +174,13 @@ footer span.copyright {
 }
 
 .menu-section h3 {
-    color: #1e1f2b;
+    color: #222222;
     font-size: 1.2em;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 20px;
-    font-weight: 700;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
 }
 
 .menu-section ul {
@@ -193,12 +197,12 @@ footer span.copyright {
     display: flex;
     align-items: center;
     padding: 10px 12px;
-    color: #1e1f2b;
+    color: #666666;
     text-decoration: none;
     border-radius: 8px;
     transition: all 0.2s ease;
     font-size: 1.1em;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
 }
 
@@ -209,52 +213,59 @@ footer span.copyright {
 }
 
 .menu-section ul li a:hover span {
-    color: #ffffff;
+    color: #222222;
 }
 
 .menu-section ul li a:hover {
-    background-color: #39408f;
-    color: #ffffff;
+    background-color: rgba(79, 110, 247, 0.1);
+    color: #222222;
 }
 
 .menu-section ul li a:hover i {
-    color: #ffffff;
+    color: #4F6EF7;
 }
 
 .menu-section ul li a i {
     margin-right: 12px;
     width: 20px;
     text-align: center;
-    color: #1e1f2b;
+    color: #666666;
     font-size: 1.1em;
 }
 
 .menu-icon {
-    width: 25px;  /* Adjust size as needed */
-    height: 25px;  /* Adjust size as needed */
-    margin-right: 5px;  /* Same as the original icon spacing */
-    vertical-align: middle;  /* Aligns icon with text */
+    width: 25px;
+    /* Adjust size as needed */
+    height: 25px;
+    /* Adjust size as needed */
+    margin-right: 5px;
+    /* Same as the original icon spacing */
+    vertical-align: middle;
+    /* Aligns icon with text */
 }
 
 /* Content styles */
 .content h1 {
-    color: #1e1f2b;
+    color: #222222;
     font-size: 2.5em;
     margin-bottom: 30px;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .col-md-3, .col-md-1, .col-md-8 {
+
+    .col-md-3,
+    .col-md-1,
+    .col-md-8 {
         padding: 0;
     }
-    
+
     .sidebar {
         min-height: auto;
     }
-    
+
     .content {
         padding: 20px;
     }
@@ -292,22 +303,23 @@ footer span.copyright {
 
 .blog-post {
     margin-bottom: 40px;
-    padding: 10px;
-    background: #ffffff;
+    padding: 20px;
+    background: #FFFFFF;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
 }
 
 .blog-post h2 {
-    color: #1e1f2b;
+    color: #222222;
     margin-bottom: 10px;
     font-size: 1.8em;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
-    font-weight: 500px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
 }
 
 .blog-post .date {
-    color: #666;
+    color: #666666;
     font-size: 0.9em;
     margin-bottom: 15px;
 }
@@ -323,14 +335,14 @@ footer span.copyright {
 
 .read-more {
     display: inline-block;
-    color: #39408f;
+    color: #4F6EF7;
     text-decoration: none;
     font-weight: 500;
     margin-top: 15px;
 }
 
 .read-more:hover {
-    color: #1e1f2b;
+    color: #222222;
 }
 
 /* Intro content styles */
@@ -341,10 +353,10 @@ footer span.copyright {
 }
 
 #blogIntro h1 {
-    color: #1e1f2b;
+    color: #222222;
     font-size: 2.5em;
     margin-bottom: 30px;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
 
@@ -361,15 +373,15 @@ footer span.copyright {
     height: auto;
     border-radius: 8px;
     margin: 20px auto;
-    display: block; 
+    display: block;
 }
 
 .intro-text {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.6;
-    color: #1e1f2b;
+    color: #666666;
     margin: 20px auto;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Course intro styling */
@@ -387,7 +399,7 @@ footer span.copyright {
 
 .collapsible {
     background-color: transparent;
-    color: #1e1f2b;
+    color: #222222;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -399,6 +411,7 @@ footer span.copyright {
     display: flex;
     align-items: center;
     transition: 0.3s;
+    font-family: 'Inter', sans-serif;
 }
 
 .collapsible:hover {
@@ -494,7 +507,7 @@ footer span.copyright {
 }
 
 /* Style for when content is expanded */
-.nested-section .collapsible.active + .content-collapse {
+.nested-section .collapsible.active+.content-collapse {
     padding: 15px 25px;
     max-height: fit-content;
 }
@@ -529,4 +542,4 @@ footer span.copyright {
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-} 
+}
