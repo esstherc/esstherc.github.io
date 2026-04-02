@@ -535,6 +535,21 @@ footer {
     margin-bottom: 50px;
 }
 
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: var(--secondary-color);
+    margin: 0 15px;
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--text-color);
+}
+
 /* ABOUT PAGE: BENTO GRID & GHOST HERO */
 .about-hero {
     min-height: 50vh;
