@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="Case Study: Neotoma Taxonomy Browser - UX Research & Visualization Design">
+    <meta name="author" content="Yanbing Chen">
+    <title>Neotoma Case Study | Yanbing Chen</title>
+
+    <!-- Bootstrap -->
+    <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link href="libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="libs/fontawesome/css/brands.min.css" rel="stylesheet" />
+    <link href="libs/fontawesome/css/solid.min.css" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link href="css/style-industrial.css" rel="stylesheet">
+    <link href="css/casestudy.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/icon.png">
+</head>
+
+<body class="cs-page">
+
+    <!-- Navigation -->
+    <nav class="navbar-industrial">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Yanbing Chen</a>
+            <div class="nav-pills-container">
+                <a href="about.html" class="nav-link-ind">About</a>
+                <a href="index.html" class="nav-link-ind active">Portfolio</a>
+                <a href="https://yanbing-chen-research.notion.site/portfolio?v=1191644e076f81b085bc000c36b8c7b3"
+                    target="_blank" class="nav-link-ind">Visual Projects</a>
+                <a href="resume.html" class="nav-link-ind">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="cs-hero">
+        <div class="cs-hero-label reveal">NEOTOMA PALEOECOLOGY DATABASE</div>
+        <h1 class="cs-hero-title reveal">Making 60,000 Taxonomic Records Browsable for Scientists Who Don't Think in
+            SQL</h1>
+        <p class="cs-hero-summary reveal">
+            <span class="highlight">Designed and built an interactive radial taxonomy browser</span> for the
+            NSF-funded Neotoma Paleoecology Database, using grounded theory interviews, activity theory modeling, and
+            think-aloud usability evaluation with domain experts.
+        </p>
+        <div class="cs-tags reveal">
+            <span class="cs-tag">UX Research</span>
+            <span class="cs-tag">Data Visualization</span>
+            <span class="cs-tag">D3.js</span>
+            <span class="cs-tag">Usability Testing</span>
+            <span class="cs-tag">Information Architecture</span>
+        </div>
+    </header>
+
+    <!-- Hero image -->
+    <div class="cs-hero-image reveal">
+        <img src="assets/neotoma.png" alt="Neotoma Taxonomy Hierarchical Visualizer">
+    </div>
+
+    <!-- Overview -->
+    <hr class="cs-section-divider">
+
+    <section class="cs-overview">
+        <div class="cs-overview-header reveal">
+            <div class="cs-overview-label">The tl;dr</div>
+            <div class="cs-overview-title">Overview</div>
+        </div>
+
+        <div class="cs-two-col">
+            <aside class="cs-sidebar reveal">
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Role</div>
+                    <div class="cs-meta-value">UX Design Researcher</div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Methods</div>
+                    <div class="cs-meta-value">
+                        Grounded Theory<br>
+                        Activity Theory<br>
+                        Think-Aloud Protocol<br>
+                        Mouse-Tracking Analysis
+                    </div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Tools</div>
+                    <div class="cs-meta-value">
+                        D3.js, PostgreSQL<br>
+                        Figma, Python
+                    </div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Duration</div>
+                    <div class="cs-meta-value">2025 - Present</div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Links</div>
+                    <div class="cs-meta-value">
+                        <a href="https://yanbingchen.site/Neotoma-Visualizer/" target="_blank"
+                            style="color: #222; border-bottom: 1px solid #CCC;">Live Prototype</a>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="cs-content reveal">
+                <div class="cs-content-label">Neotoma</div>
+                <h2 class="cs-content-heading">A taxonomy browser for the world's largest paleoecology database</h2>
+                <p>
+                    The <a href="https://www.neotomadb.org/" target="_blank"
+                        style="color: #222; border-bottom: 1px solid #CCC;">Neotoma Paleoecology Database</a> is an
+                    NSF-funded, open-access platform holding 60,000+ taxonomic records used by Earth scientists studying
+                    climate change, biodiversity, and biogeochemical cycles. The data follows FAIR principles (Findable,
+                    Accessible, Interoperable, Reusable), but browsing the taxonomy itself was anything but.
+                </p>
+                <p>
+                    <span class="highlight">Scientists navigated taxonomic hierarchies through raw SQL queries or flat
+                        text lists.</span> There was no visual interface to explore how species, genera, families, and
+                    phyla related to each other, no way to trace synonym histories, and no tool to understand where a
+                    taxon sat within the larger classification structure.
+                </p>
+
+                <div class="cs-content-label" style="margin-top: 50px;">The Problem</div>
+                <h2 class="cs-content-heading">Three contradictions hiding in the workflow</h2>
+                <p>
+                    Through Phase I expert interviews (N=7), I identified three systemic contradictions using Activity
+                    Theory:
+                </p>
+                <p>
+                    <strong>1. The broken toolchain.</strong> Rich metadata entered in data entry tools (Tilia) became
+                    invisible in discovery tools. Analysis moved "off-books" to R scripts, preventing data cleaning
+                    feedback loops.<br><br>
+                    <strong>2. The lumping vs. splitting paradox.</strong> Data entry rules forced "splitting"
+                    (preserving
+                    original taxonomic names from authors), but analysis required "lumping" (standardized regional
+                    comparisons). Current tools had no dynamic aggregation capability.<br><br>
+                    <strong>3. Taxonomy as "history of science."</strong> Taxonomic names aren't stable labels. They
+                    carry histories of reclassification, synonymy, and uncertainty (e.g., "cf.", "aff.", "type sp.").
+                    Existing interfaces treated them as flat strings.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact -->
+    <hr class="cs-section-divider">
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar">
+                <!-- empty -->
+            </aside>
+            <div class="cs-content reveal">
+                <div class="cs-content-label">Impact</div>
+                <h2 class="cs-content-heading">Results from two research phases</h2>
+                <p>
+                    The project followed a user-centered design model: needs assessment from expert interviews,
+                    prototype design informed by grounded theory findings, and formative evaluation through think-aloud
+                    testing.
+                </p>
+
+                <div class="cs-impact-grid" style="margin-top: 40px;">
+                    <div class="reveal reveal-delay-1">
+                        <div class="cs-impact-number">60k+</div>
+                        <div class="cs-impact-desc">Taxonomic records made browsable through a radial interface</div>
+                    </div>
+                    <div class="reveal reveal-delay-2">
+                        <div class="cs-impact-number">7 + 5</div>
+                        <div class="cs-impact-desc">Expert interviews (Phase I) + think-aloud participants (Phase II)
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-3">
+                        <div class="cs-impact-number">82-100%</div>
+                        <div class="cs-impact-desc">Task success rates across three evaluation tasks</div>
+                    </div>
+                    <div class="reveal reveal-delay-4">
+                        <div class="cs-impact-number">Live</div>
+                        <div class="cs-impact-desc">Working prototype deployed for the Neotoma community</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase I -->
+    <hr class="cs-section-divider">
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar reveal">
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Phase</div>
+                    <div class="cs-meta-value">I. Needs Assessment</div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Methods</div>
+                    <div class="cs-meta-value">
+                        Semi-structured<br>
+                        Interviews (N=7)<br>
+                        Grounded Theory<br>
+                        Activity Theory
+                    </div>
+                </div>
+            </aside>
+
+            <div class="cs-content">
+                <div class="cs-content-label reveal">Needs Assessment</div>
+                <h2 class="cs-content-heading reveal">Understanding how paleoecologists actually work with taxonomy
+                </h2>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">01</div>
+                    <div class="cs-process-title">Expert Interviews with Grounded Theory Coding</div>
+                    <p class="cs-process-text">
+                        I conducted semi-structured interviews with 7 domain experts (data stewards, researchers,
+                        database developers) to understand their actual taxonomy workflows. Using inductive grounded
+                        theory coding (open, axial, selective), I surfaced patterns that wouldn't have emerged from a
+                        feature wishlist.
+                    </p>
+                    <p class="cs-process-text">
+                        The key insight: <strong>taxonomy in paleoecology isn't a stable reference system. It's a living
+                            record of scientific disagreement.</strong> A single pollen grain might be classified
+                        differently by two researchers based on regional conventions. The visualization needed to
+                        surface this uncertainty, not hide it.
+                    </p>
+                </div>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">02</div>
+                    <div class="cs-process-title">Activity Theory Contradiction Analysis</div>
+                    <p class="cs-process-text">
+                        I modeled the taxonomy workflow as an Activity Theory system (Subject, Object, Tools, Rules,
+                        Community, Division of Labor) and identified systemic contradictions. The broken
+                        toolchain between Tilia (data entry) and Explorer (discovery) meant that metadata
+                        quality degraded as data moved through the pipeline. This wasn't a UI problem. It was an
+                        infrastructure problem that a visualization tool could partially address by making
+                        hierarchical relationships and synonym histories visible.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prototype Design -->
+    <hr class="cs-section-divider">
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar reveal">
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Phase</div>
+                    <div class="cs-meta-value">Prototype Design</div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Stack</div>
+                    <div class="cs-meta-value">
+                        D3.js<br>
+                        PostgreSQL<br>
+                        Materialized Views<br>
+                        Neotoma API
+                    </div>
+                </div>
+            </aside>
+
+            <div class="cs-content">
+                <div class="cs-content-label reveal">Visualization Design</div>
+                <h2 class="cs-content-heading reveal">A radial tree that handles 60,000 nodes without drowning the user
+                </h2>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">03</div>
+                    <div class="cs-process-title">Radial Dendrogram with Two-Level Hierarchy Control</div>
+                    <p class="cs-process-text">
+                        The core visualization is a radial dendrogram (D3.js cluster layout) representing the full
+                        taxonomic hierarchy: Phylum, Class, Order, Family, Genus, Species. The default view shows
+                        major taxon groups as terminal nodes. Selecting a group drills into its full sub-tree. This
+                        two-level approach prevents the "wall of nodes" problem while preserving the ability to explore
+                        any branch in full detail.
+                    </p>
+                </div>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">04</div>
+                    <div class="cs-process-title">Search, Synonym Awareness, and Ancestor Highlighting</div>
+                    <p class="cs-process-text">
+                        Users can search any taxon by name or ID. The system highlights the full ancestor path (root
+                        to leaf), auto-rotates the tree to center the result, and displays the complete lineage in a
+                        side panel. Synonym-aware search surfaces related names and their validity status, directly
+                        addressing the "lumping vs. splitting" contradiction from Phase I.
+                    </p>
+                </div>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">05</div>
+                    <div class="cs-process-title">Performance: Making 60,000 Nodes Renderable</div>
+                    <p class="cs-process-text">
+                        Rendering a 60,000-node tree in the browser required deliberate performance engineering.
+                        I used PostgreSQL materialized views to precompute ancestor paths (eliminating expensive
+                        recursive queries at render time), angle-based label culling that progressively reveals text
+                        on zoom, and a modular architecture separating data processing, layout, highlighting, and
+                        interaction into independent modules. The result: smooth rotation, zoom, and pan on a tree
+                        that would crash a naive D3 implementation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase II -->
+    <hr class="cs-section-divider">
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar reveal">
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Phase</div>
+                    <div class="cs-meta-value">II. Evaluation</div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Methods</div>
+                    <div class="cs-meta-value">
+                        Think-Aloud (N=5)<br>
+                        Task Completion<br>
+                        Mouse-Tracking<br>
+                        Open Coding
+                    </div>
+                </div>
+            </aside>
+
+            <div class="cs-content">
+                <div class="cs-content-label reveal">Usability Evaluation</div>
+                <h2 class="cs-content-heading reveal">What broke when real scientists used it</h2>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">06</div>
+                    <div class="cs-process-title">Task-Based Think-Aloud Protocol</div>
+                    <p class="cs-process-text">
+                        I designed three evaluation tasks mapping to real research workflows: (1) exploring the
+                        hierarchy to find a taxon's placement, (2) investigating synonym and validity status, and
+                        (3) determining higher-level context for a given species. Five participants completed the
+                        tasks while thinking aloud, with screen recording and mouse tracking.
+                    </p>
+                    <p class="cs-process-text">
+                        <strong>Task 3 (interpreting context) had the highest success rate and lowest completion time
+                            (~15.5s).</strong> The radial layout made hierarchical context immediately visible.
+                        <strong>Task 2 (synonym/validity) had the lowest success rate (82.9%)</strong>, revealing
+                        that domain-specific terminology created a "wall of jargon" for non-experts.
+                    </p>
+                </div>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">07</div>
+                    <div class="cs-process-title">Mouse-Tracking Heatmap Analysis</div>
+                    <p class="cs-process-text">
+                        Beyond task metrics, I analyzed mouse movement heatmaps to understand where users' attention
+                        went. The search bar dominated early exploration, confirming a qualitative finding:
+                        <strong>users defaulted to search as a compensatory strategy when visual navigation became
+                            cluttered or overwhelming.</strong> This fed directly into design refinements: reducing
+                        visual
+                        noise in the default view, improving label readability, and making the search-to-tree
+                        connection more prominent.
+                    </p>
+                </div>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">08</div>
+                    <div class="cs-process-title">Qualitative Coding of User Feedback</div>
+                    <p class="cs-process-text">
+                        Open, axial, and selective coding of the think-aloud transcripts surfaced three themes:
+                        the "wall of jargon" problem (non-experts struggled with domain text), search as compensatory
+                        strategy (visual navigation abandonment), and visual ergonomics (physical discomfort with dense
+                        label regions leading to avoidance of advanced features). Each theme mapped to specific
+                        interface refinements in the next iteration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflection -->
+    <hr class="cs-section-divider">
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar">
+                <!-- empty -->
+            </aside>
+            <div class="cs-content reveal">
+                <div class="cs-content-label">Reflection</div>
+                <h2 class="cs-content-heading">What stayed with me</h2>
+
+                <div class="cs-process-item">
+                    <div class="cs-process-title">Visualization is information architecture</div>
+                    <p class="cs-process-text">
+                        Choosing a radial dendrogram over a sunburst or a flat list wasn't an aesthetic decision. It
+                        was an IA decision about how taxonomic depth, branching factor, and synonym relationships
+                        should be encoded spatially. The layout IS the information architecture. Every encoding
+                        choice (angle for rank, color for group, link highlighting for ancestry) determines what
+                        questions users can answer without thinking.
+                    </p>
+                </div>
+
+                <div class="cs-process-item">
+                    <div class="cs-process-title">Theory earns its keep in complex domains</div>
+                    <p class="cs-process-text">
+                        In most product work, you can skip formal theory and go straight to user stories. In
+                        paleoecology, where workflows span decades of disciplinary convention, Activity Theory gave me
+                        a framework to name contradictions that users experienced but couldn't articulate. "The
+                        toolchain is broken" is actionable in a way that "I wish it were easier" is not.
+                    </p>
+                </div>
+
+                <div class="cs-process-item">
+                    <div class="cs-process-title">Performance is a UX decision</div>
+                    <p class="cs-process-text">
+                        Materialized views, label culling, and modular architecture aren't engineering details
+                        irrelevant to design. A tree that takes 8 seconds to render is a tree nobody will use.
+                        Making 60,000 nodes feel instant required design-level thinking about what to show and when,
+                        not just how fast the code runs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back -->
+    <div class="cs-back">
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Back to All Projects</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-icons" style="margin-bottom: 15px;">
+                <a href="mailto:yanbing.chen@wisc.edu"><i class="fa fa-envelope"></i></a>
+                <a href="https://github.com/esstherc"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/Essstherccc"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/yanbingc/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p style="margin-top: 20px; color: #666;">Copyright &copy; 2026 Yanbing Chen.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="libs/bootstrap/jquery.min.js"></script>
+    <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- Scroll reveal -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal, .reveal-slide-left, .reveal-slide-right');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -30px 0px'
+            });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+
+</body>
+
+</html>

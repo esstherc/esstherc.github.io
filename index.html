@@ -12,7 +12,8 @@
     <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Fontawesome -->
@@ -22,6 +23,7 @@
 
     <!-- Industrial Styles -->
     <link href="css/style-industrial.css" rel="stylesheet">
+    <link href="css/casestudy.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/icon.png">
 
     <style>
@@ -31,7 +33,7 @@
     </style>
 </head>
 
-<body>
+<body class="cs-page">
 
     <!-- Navigation -->
     <nav class="navbar-industrial">
@@ -54,8 +56,8 @@
                 style="font-family: var(--font-display); font-size: 4rem; font-weight: 700; color: var(--text-color); margin-bottom: 15px; letter-spacing: -1px;">
                 Selected Works
             </h1>
-            <p style="font-size: 1.4rem; color: var(--secondary-color); font-weight: 300;">
-                Designing spatial experiences that balance complex data, user needs, and business goals.
+            <p style="font-size: 1.3rem; color: var(--secondary-color); font-weight: 300; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+                UX Researcher &amp; Product Designer with 6+ years of experience in spatial data tools, information architecture, and cross-functional product strategy.
             </p>
         </div>
     </header>
@@ -72,134 +74,107 @@
     <main class="portfolio-grid" id="portfolioGrid" style="margin-bottom: 120px;">
 
         <!-- Project 1 -->
-        <article class="gallery-card dataviz">
-            <div class="gallery-img-wrap">
-                <img src="assets/neotoma.png" alt="Taxonomy Visualization">
-            </div>
-            <div class="gallery-content">
-                <div class="gallery-category">Data Visualization</div>
-                <h3 class="gallery-title">Taxonomy Visualization System</h3>
-                <p class="gallery-desc">
-                    Navigated deep ambiguity to transform 60,000+ paleoecological records into a scalable hierarchical
-                    interface. Balanced browser rendering limitations with the user's need to quickly identify taxonomic
-                    lineages.
-                </p>
-                <div class="gallery-meta">
-                    <div class="meta-block">
-                        <h6>Role</h6>
-                        <p>UX Designer</p>
-                    </div>
-                    <div class="meta-block" style="text-align: right;">
-                        <h6>Impact</h6>
-                        <p>Enhanced Data Discovery</p>
+        <article class="gallery-card strategy">
+            <a href="casestudy-gisphere.html" class="card-link">
+                <div class="gallery-img-wrap">
+                    <img src="assets/case%20study/gisphere/thumbnail-1.png" alt="GISphere">
+                </div>
+                <div class="gallery-content">
+                    <div class="gallery-category">Product Strategy · 2022 &ndash; Present</div>
+                    <h3 class="gallery-title">GISphere Program Guide</h3>
+                    <p class="gallery-desc">
+                        Built a searchable database of 500+ GIS programs and 2,000+ faculty profiles for graduate applicants worldwide, pivoting the platform from a content blog to a structured decision-support tool. Reached 50,000+ users.
+                    </p>
+                    <div class="gallery-meta">
+                        <div class="meta-block">
+                            <h6>Role</h6>
+                            <p>Co-Chair & Product Lead</p>
+                        </div>
+                        <div class="meta-block" style="text-align: right;">
+                            <h6>Impact</h6>
+                            <p>50k+ Users, 500+ Programs</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </article>
 
         <!-- Project 2 -->
-        <article class="gallery-card strategy">
-            <div class="gallery-img-wrap" style="background: #254DE9; padding: 20px;">
-                <!-- Fallback to a solid background and logo if project photo is missing, keeping a premium look -->
-                <img src="assets/van-gogh.png" alt="GISphere" style="object-fit: cover; opacity: 0.9;">
-            </div>
-            <div class="gallery-content">
-                <div class="gallery-category">Product Strategy</div>
-                <h3 class="gallery-title">GISphere Knowledge Platform</h3>
-                <p class="gallery-desc">
-                    Led the strategic redesign of a global geospatial knowledge hub. Prioritized core features under
-                    tight PM milestones to drive user retention and streamline navigation for over 10,000 spatial
-                    scientists.
-                </p>
-                <div class="gallery-meta">
-                    <div class="meta-block">
-                        <h6>Role</h6>
-                        <p>Product Designer</p>
-                    </div>
-                    <div class="meta-block" style="text-align: right;">
-                        <h6>Impact</h6>
-                        <p>10k+ Global Users</p>
+        <article class="gallery-card ux">
+            <a href="casestudy-orka.html" class="card-link">
+                <div class="gallery-img-wrap" style="background: #F4F6F8;">
+                    <img src="assets/logo_orka.png" alt="Orka AI" style="object-fit: contain; padding: 40px;">
+                </div>
+                <div class="gallery-content">
+                    <div class="gallery-category">Product &amp; Operations · 2021 &ndash; 2022</div>
+                    <h3 class="gallery-title">Orka AI Hearing Aid</h3>
+                    <p class="gallery-desc">
+                        Three roles in 19 months: competitive analysis for Sequoia/Tencent fundraising, A/B testing and user journey mapping for Canada go-to-market, then building the 0-to-1 North American logistics system and catching 20+ app issues via monkey testing.
+                    </p>
+                    <div class="gallery-meta">
+                        <div class="meta-block">
+                            <h6>Role</h6>
+                            <p>Finance / Data / Product Intern</p>
+                        </div>
+                        <div class="meta-block" style="text-align: right;">
+                            <h6>Impact</h6>
+                            <p>3 Roles, 0→1 NA Logistics</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </article>
 
         <!-- Project 3 -->
-        <article class="gallery-card ux">
-            <div class="gallery-img-wrap" style="background: #F4F6F8;">
-                <img src="assets/logo_orka.png" alt="Orka AI" style="object-fit: contain; padding: 40px;">
-            </div>
-            <div class="gallery-content">
-                <div class="gallery-category">UX Research & Design</div>
-                <h3 class="gallery-title">Orka AI-Hearing Aid</h3>
-                <p class="gallery-desc">
-                    Conducted rigorous usability studies and think-aloud protocols for clinical workflows. Bridged the
-                    gap between hardware engineering constraints and patient accessibility needs to decrease support
-                    overhead.
-                </p>
-                <div class="gallery-meta">
-                    <div class="meta-block">
-                        <h6>Role</h6>
-                        <p>UX Researcher</p>
-                    </div>
-                    <div class="meta-block" style="text-align: right;">
-                        <h6>Impact</h6>
-                        <p>Accessible Clinical UI</p>
+        <article class="gallery-card dataviz">
+            <a href="casestudy-neotoma.html" class="card-link">
+                <div class="gallery-img-wrap">
+                    <img src="assets/neotoma.png" alt="Taxonomy Visualization">
+                </div>
+                <div class="gallery-content">
+                    <div class="gallery-category">Data Visualization · 2025 &ndash; Present</div>
+                    <h3 class="gallery-title">Neotoma Taxonomy Browser</h3>
+                    <p class="gallery-desc">
+                        Designed and built a radial taxonomy browser for 60,000+ paleoecological records, combining grounded theory interviews (N=7), Activity Theory workflow analysis, and think-aloud usability evaluation (N=5) with mouse-tracking heatmaps.
+                    </p>
+                    <div class="gallery-meta">
+                        <div class="meta-block">
+                            <h6>Role</h6>
+                            <p>UX Design Researcher</p>
+                        </div>
+                        <div class="meta-block" style="text-align: right;">
+                            <h6>Impact</h6>
+                            <p>60k+ Records, Live Prototype</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </article>
 
         <!-- Project 4 -->
-        <article class="gallery-card dataviz">
-            <div class="gallery-img-wrap">
-                <img src="assets/international-student.png" alt="Multiscale Heatmap">
-            </div>
-            <div class="gallery-content">
-                <div class="gallery-category">Data Visualization</div>
-                <h3 class="gallery-title">Multiscale Heatmap Exploration</h3>
-                <p class="gallery-desc">
-                    Designed interactive geographic heatmaps to surface actionable insights from dense datasets. Shifted
-                    away from standard templates to create custom visual hierarchies that stakeholders could easily
-                    interpret.
-                </p>
-                <div class="gallery-meta">
-                    <div class="meta-block">
-                        <h6>Role</h6>
-                        <p>Cartographer & UX</p>
-                    </div>
-                    <div class="meta-block" style="text-align: right;">
-                        <h6>Impact</h6>
-                        <p>Actionable Analytics</p>
+        <article class="gallery-card dataviz strategy">
+            <a href="casestudy-carcrash.html" class="card-link">
+                <div class="gallery-img-wrap">
+                    <img src="assets/case%20study/car-crash/Dashboard-1.jpg" alt="Wisconsin Car Crash Dashboard">
+                </div>
+                <div class="gallery-content">
+                    <div class="gallery-category">Data Visualization · 2024</div>
+                    <h3 class="gallery-title">Wisconsin Car Crash Dashboard</h3>
+                    <p class="gallery-desc">
+                        Designed a multi-view Power BI dashboard visualizing 34,688 crash records for government policymakers, with spatial, temporal, infrastructure, and weather analysis across cross-filtered views.
+                    </p>
+                    <div class="gallery-meta">
+                        <div class="meta-block">
+                            <h6>Role</h6>
+                            <p>Lead Designer</p>
+                        </div>
+                        <div class="meta-block" style="text-align: right;">
+                            <h6>Impact</h6>
+                            <p>34k+ Records, 4 Views</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </article>
-
-        <!-- Project 5 -->
-        <article class="gallery-card strategy ux">
-            <div class="gallery-img-wrap">
-                <img src="assets/geog370-final-project.png" alt="Wisconsin Car Crash Dashboard">
-            </div>
-            <div class="gallery-content">
-                <div class="gallery-category">Product Strategy</div>
-                <h3 class="gallery-title">Wisconsin Car Crash Dashboard</h3>
-                <p class="gallery-desc">
-                    Transformed chaotic state-level crash data into an intuitive analytical dashboard. Facilitated
-                    alignment between state agencies and dev teams to ensure the final product directly supported policy
-                    decision-making.
-                </p>
-                <div class="gallery-meta">
-                    <div class="meta-block">
-                        <h6>Role</h6>
-                        <p>Lead Designer</p>
-                    </div>
-                    <div class="meta-block" style="text-align: right;">
-                        <h6>Impact</h6>
-                        <p>Policy Alignment</p>
-                    </div>
-                </div>
-            </div>
+            </a>
         </article>
 
     </main>
@@ -213,7 +188,7 @@
                 <a href="https://x.com/Essstherccc"><i class="fab fa-x-twitter"></i></a>
                 <a href="https://www.linkedin.com/in/yanbingc/"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <p style="margin-top: 20px; color: #666;">Copyright © 2024 Yanbing Chen.</p>
+            <p style="margin-top: 20px; color: #666;">Copyright © 2026 Yanbing Chen.</p>
         </div>
     </footer>
 

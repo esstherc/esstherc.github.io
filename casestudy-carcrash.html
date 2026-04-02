@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="Case Study: Wisconsin Car Crash Analysis Dashboard">
+    <meta name="author" content="Yanbing Chen">
+    <title>Car Crash Dashboard Case Study | Yanbing Chen</title>
+
+    <!-- Bootstrap -->
+    <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link href="libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="libs/fontawesome/css/brands.min.css" rel="stylesheet" />
+    <link href="libs/fontawesome/css/solid.min.css" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link href="css/style-industrial.css" rel="stylesheet">
+    <link href="css/casestudy.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/icon.png">
+</head>
+
+<body class="cs-page">
+
+    <!-- Navigation -->
+    <nav class="navbar-industrial">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Yanbing Chen</a>
+            <div class="nav-pills-container">
+                <a href="about.html" class="nav-link-ind">About</a>
+                <a href="index.html" class="nav-link-ind active">Portfolio</a>
+                <a href="https://yanbing-chen-research.notion.site/portfolio?v=1191644e076f81b085bc000c36b8c7b3"
+                    target="_blank" class="nav-link-ind">Visual Projects</a>
+                <a href="resume.html" class="nav-link-ind">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="cs-hero">
+        <div class="cs-hero-label reveal">DATA VISUALIZATION & ANALYTICS</div>
+        <h1 class="cs-hero-title reveal">Turning 34,688 Crash Records into Actionable Policy Insights</h1>
+        <p class="cs-hero-summary reveal">
+            <span class="highlight">Designed a multi-view Power BI dashboard</span> that lets government agencies and
+            policymakers explore spatial, temporal, and environmental patterns in Wisconsin traffic accidents, from a
+            dataset of 7.7 million national records.
+        </p>
+        <div class="cs-tags reveal">
+            <span class="cs-tag">Data Visualization</span>
+            <span class="cs-tag">Dashboard Design</span>
+            <span class="cs-tag">Spatial Analysis</span>
+            <span class="cs-tag">Data Processing</span>
+            <span class="cs-tag">Policy Support</span>
+        </div>
+    </header>
+
+    <!-- Hero image -->
+    <div class="cs-hero-image reveal">
+        <img src="assets/case%20study/car-crash/Dashboard-1.jpg" alt="Wisconsin Car Crash Dashboard primary view">
+    </div>
+
+    <!-- Overview -->
+    <hr class="cs-section-divider">
+
+    <section class="cs-overview">
+        <div class="cs-overview-header reveal">
+            <div class="cs-overview-label">The tl;dr</div>
+            <div class="cs-overview-title">Overview</div>
+        </div>
+
+        <div class="cs-two-col">
+            <aside class="cs-sidebar reveal">
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Role</div>
+                    <div class="cs-meta-value">Lead Designer</div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Tools</div>
+                    <div class="cs-meta-value">
+                        Power BI<br>
+                        Python<br>
+                        DAX
+                    </div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Team</div>
+                    <div class="cs-meta-value">
+                        2-person team<br>
+                        (Yanbing Chen,<br>Qianheng Zhang)
+                    </div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Duration</div>
+                    <div class="cs-meta-value">Spring 2024</div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Links</div>
+                    <div class="cs-meta-value">
+                        <a href="https://www.youtube.com/watch?v=MDELlRKnYrM&ab_channel=YanbingChen" target="_blank"
+                            style="color: #222; border-bottom: 1px solid #CCC;">Video Demo</a><br>
+                        <a href="https://app.powerbi.com/view?r=eyJrIjoiZjJiZTBiZjYtZmM1MC00YzQyLWE5YTctN2FjZWVmOGZhM2M3IiwidCI6IjZmMGJiNzJmLTUzNzctNGRkZi05MzZhLWI2YzcyYmYyMWFlMiIsImMiOjF9&pageName=ReportSection122b823e02231482f562"
+                            target="_blank" style="color: #222; border-bottom: 1px solid #CCC;">Live Dashboard</a>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="cs-content reveal">
+                <div class="cs-content-label">Context</div>
+                <h2 class="cs-content-heading">7.7 million records, one state, four questions</h2>
+                <p>
+                    Wisconsin traffic crash data is publicly available but not publicly usable. The raw dataset contains
+                    7.7 million accident records nationwide (Feb 2016 to March 2023), but no tool existed for
+                    policymakers to slice, filter, and compare crash patterns at the state level.
+                </p>
+                <p>
+                    <span class="highlight">We filtered it down to 34,688 Wisconsin-specific records</span> and designed
+                    a dashboard that answers four research questions government agencies actually care about: spatial
+                    clustering, temporal peaks, infrastructure influence, and weather impact.
+                </p>
+
+                <div class="cs-content-label" style="margin-top: 50px;">The Problem</div>
+                <h2 class="cs-content-heading">Raw data doesn't change policy. Clear patterns do.</h2>
+                <p>
+                    Transportation departments and emergency services need to make resource allocation decisions: where
+                    to add signals, when to deploy crews, which road types need attention. But the data they had was a
+                    flat CSV with millions of rows.
+                </p>
+                <p>
+                    Three design challenges:
+                </p>
+                <p>
+                    <strong>1. Scale vs. clarity.</strong> 34,688 dots on a map is noise. Users needed ways to filter by
+                    county, severity, road type, and time period without losing the spatial overview.<br><br>
+                    <strong>2. Multiple analytical lenses.</strong> A single chart can't answer "where, when, why, and
+                    how bad?" simultaneously. The dashboard needed distinct views for spatial, temporal, infrastructure,
+                    and weather analysis.<br><br>
+                    <strong>3. Audience range.</strong> Both data-literate analysts and non-technical policymakers
+                    needed
+                    to extract insights without training.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact -->
+    <hr class="cs-section-divider">
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar">
+                <!-- empty sidebar to maintain alignment -->
+            </aside>
+            <div class="cs-content reveal">
+                <div class="cs-content-label">Impact</div>
+                <h2 class="cs-content-heading">What the dashboard reveals</h2>
+                <p>
+                    The finished dashboard gives users interactive access to Wisconsin crash patterns across four
+                    dimensions, with cross-filtering that connects every view.
+                </p>
+
+                <div class="cs-impact-grid" style="margin-top: 40px;">
+                    <div class="reveal reveal-delay-1">
+                        <div class="cs-impact-number">34,688</div>
+                        <div class="cs-impact-desc">Wisconsin crash records processed and visualized</div>
+                    </div>
+                    <div class="reveal reveal-delay-2">
+                        <div class="cs-impact-number">4 views</div>
+                        <div class="cs-impact-desc">Spatial, temporal, infrastructure, and weather analysis</div>
+                    </div>
+                    <div class="reveal reveal-delay-3">
+                        <div class="cs-impact-number">7 filters</div>
+                        <div class="cs-impact-desc">Year, county, severity, road type, time range, and more</div>
+                    </div>
+                    <div class="reveal reveal-delay-4">
+                        <div class="cs-impact-number">2 audiences</div>
+                        <div class="cs-impact-desc">Government policymakers and Wisconsin residents</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <hr class="cs-section-divider">
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar reveal">
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Phase</div>
+                    <div class="cs-meta-value">Data Pipeline</div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Tools</div>
+                    <div class="cs-meta-value">
+                        Python<br>
+                        Power BI / DAX
+                    </div>
+                </div>
+            </aside>
+
+            <div class="cs-content">
+                <div class="cs-content-label reveal">Data Preparation</div>
+                <h2 class="cs-content-heading reveal">From 7.7 million rows to a usable dataset</h2>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">01</div>
+                    <div class="cs-process-title">Filtering and Feature Engineering</div>
+                    <p class="cs-process-text">
+                        The source dataset covered the entire US. I used Python to filter down to Wisconsin records
+                        (34,688 out of 7.7M) and created new categorical columns for analysis: time-of-day
+                        classification (Morning Commute, Daytime, Evening Commute, Evening, Late Night), weather
+                        categories (grouping dozens of raw weather strings into 7 meaningful buckets), and severity
+                        tiers.
+                    </p>
+                </div>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">02</div>
+                    <div class="cs-process-title">DAX Measures for Dynamic Analysis</div>
+                    <p class="cs-process-text">
+                        Inside Power BI, I wrote custom DAX formulas to create calculated fields that the raw data
+                        didn't provide. Time Classification mapped each crash hour to a commute period. Weather Category
+                        consolidated 50+ raw weather condition strings into 7 actionable groups (Clear, Cloudy, Rain,
+                        Snow, Thunderstorms, Icy, Unknown). These computed fields became the backbone of every filter
+                        and chart in the dashboard.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="cs-section-divider">
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar reveal">
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Phase</div>
+                    <div class="cs-meta-value">Dashboard Design</div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Focus</div>
+                    <div class="cs-meta-value">
+                        4 Analytical Views<br>
+                        Cross-filtering<br>
+                        Visual Hierarchy
+                    </div>
+                </div>
+            </aside>
+
+            <div class="cs-content">
+                <div class="cs-content-label reveal">Design Decisions</div>
+                <h2 class="cs-content-heading reveal">Four views, each answering a different question</h2>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">03</div>
+                    <div class="cs-process-title">Primary Dashboard: Where are crashes happening?</div>
+                    <p class="cs-process-text">
+                        The main view centers on a dot-density map of all 34,688 crash locations, flanked by a radar
+                        chart (accidents by time range) and a donut chart (day of week distribution). A bar chart at
+                        the bottom shows monthly trends. The left panel provides global filters: year range, county,
+                        severity, and road type. Every chart cross-filters the others, so clicking "Milwaukee" on the
+                        map updates all temporal views instantly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard screenshots -->
+    <div class="cs-section reveal">
+        <div class="cs-hero-image">
+            <img src="assets/case%20study/car-crash/Dashboard-1.jpg"
+                alt="Primary dashboard with map, radar chart, and filters">
+            <p class="cs-image-caption">Primary view: spatial overview with temporal breakdowns and global filters</p>
+        </div>
+    </div>
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar">
+                <!-- empty -->
+            </aside>
+            <div class="cs-content">
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">04</div>
+                    <div class="cs-process-title">Crash Map: What road types are most dangerous?</div>
+                    <p class="cs-process-text">
+                        The second view zooms into road infrastructure. A heatmap replaces the dot map to show crash
+                        density at lower zoom levels. Paired with a sunburst chart breaking down road type and street
+                        name, and a horizontal bar chart ranking the most dangerous specific roads. This view answers
+                        the infrastructure question: are crashes clustering on US highways, state highways, interstate
+                        highways, or local roads?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cs-section reveal">
+        <div class="cs-hero-image">
+            <img src="assets/case%20study/car-crash/Dashboard-2.jpg"
+                alt="Crash map view with heatmap and road type breakdown">
+            <p class="cs-image-caption">Crash map: heatmap density with road type sunburst and street-level ranking</p>
+        </div>
+    </div>
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar">
+                <!-- empty -->
+            </aside>
+            <div class="cs-content">
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">05</div>
+                    <div class="cs-process-title">Weather and Road Features: What conditions cause crashes?</div>
+                    <p class="cs-process-text">
+                        The third view brings environmental context. Temperature and visibility gauges sit at the top.
+                        Below, stacked bar charts show the presence of nearby road features (crossings, traffic signals,
+                        junctions, stops) at crash sites. A donut chart breaks down weather conditions at the time of
+                        each crash. The finding that stood out: 64% of crashes happened in clear weather, challenging
+                        the assumption that bad weather is the primary driver.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cs-section reveal">
+        <div class="cs-hero-image">
+            <img src="assets/case%20study/car-crash/Dashboard-3.jpg"
+                alt="Weather and road features view with environmental analysis">
+            <p class="cs-image-caption">Weather and road features: environmental conditions at crash sites</p>
+        </div>
+    </div>
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar">
+                <!-- empty -->
+            </aside>
+            <div class="cs-content">
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">06</div>
+                    <div class="cs-process-title">Summary and Export</div>
+                    <p class="cs-process-text">
+                        The fourth view provides a summary table with export capability. Policymakers can filter down to
+                        a specific county, time period, or severity level, then export the filtered data for their own
+                        reports. This was a deliberate design choice: the dashboard is a starting point for analysis,
+                        not the final report itself.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design rationale -->
+    <hr class="cs-section-divider">
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar reveal">
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Phase</div>
+                    <div class="cs-meta-value">Design Rationale</div>
+                </div>
+                <div class="cs-meta-group">
+                    <div class="cs-meta-label">Focus</div>
+                    <div class="cs-meta-value">
+                        Visual Encoding<br>
+                        Interaction Design<br>
+                        Constraints
+                    </div>
+                </div>
+            </aside>
+
+            <div class="cs-content">
+                <div class="cs-content-label reveal">Why these charts, not others</div>
+                <h2 class="cs-content-heading reveal">Every visual encoding was a tradeoff</h2>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">07</div>
+                    <div class="cs-process-title">Dot map vs. heatmap</div>
+                    <p class="cs-process-text">
+                        The primary view uses a dot map because individual crash locations matter for spatial pattern
+                        recognition. But 34,688 dots create overplotting at the state level. The crash map view switches
+                        to a heatmap for density at lower zoom levels. One tradeoff we hit: <strong>Power BI's published
+                            reports cap at 30,000 map points</strong>, so the dot map only renders fully in the desktop
+                        version. The online version degrades gracefully with heatmap as fallback.
+                    </p>
+                </div>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">08</div>
+                    <div class="cs-process-title">Radar chart for time distribution</div>
+                    <p class="cs-process-text">
+                        A bar chart could show accidents by time range, but a radar chart makes the cyclical nature of
+                        time visible. You can immediately see that daytime and evening commute are the peak periods,
+                        with late night as the trough. The circular layout maps naturally to a 24-hour clock metaphor.
+                    </p>
+                </div>
+
+                <div class="cs-process-item reveal">
+                    <div class="cs-process-num">09</div>
+                    <div class="cs-process-title">Cross-filtering as the primary interaction</div>
+                    <p class="cs-process-text">
+                        Rather than building separate dashboards for each question, all charts in each view are
+                        cross-filtered. Click a county on the map and the time distribution updates. Select "Snow" in
+                        the weather chart and the map shows only snow-condition crashes. This keeps the interface
+                        simple for non-technical users while supporting deep exploration for analysts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflection -->
+    <hr class="cs-section-divider">
+
+    <section class="cs-section">
+        <div class="cs-two-col">
+            <aside class="cs-sidebar">
+                <!-- empty -->
+            </aside>
+            <div class="cs-content reveal">
+                <div class="cs-content-label">Reflection</div>
+                <h2 class="cs-content-heading">What stayed with me</h2>
+
+                <div class="cs-process-item">
+                    <div class="cs-process-title">The data pipeline is half the design work</div>
+                    <p class="cs-process-text">
+                        The dashboard looks like a visualization project, but the hardest decisions happened upstream.
+                        How to bin 50+ weather strings into meaningful categories. How to classify time periods that
+                        match how transportation departments actually think (commute vs. off-peak, not arbitrary
+                        hour blocks). Getting the data model right made every downstream chart trivially easy to build.
+                        Getting it wrong would have made the whole dashboard misleading.
+                    </p>
+                </div>
+
+                <div class="cs-process-item">
+                    <div class="cs-process-title">Platform constraints shape design</div>
+                    <p class="cs-process-text">
+                        The 30,000-point limit for published Power BI reports wasn't something we could negotiate. It
+                        forced a better design: a heatmap fallback that actually communicates density more effectively
+                        than 34,688 overlapping dots.
+                    </p>
+                </div>
+
+                <div class="cs-process-item">
+                    <div class="cs-process-title">Counterintuitive findings are the point</div>
+                    <p class="cs-process-text">
+                        The 64% clear-weather crash finding challenges the gut assumption that
+                        bad weather equals more crashes. A well-designed dashboard surfaces patterns at people didn't
+                        expect, and that's where policy
+                        changes could actually start.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back -->
+    <div class="cs-back">
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Back to All Projects</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-icons" style="margin-bottom: 15px;">
+                <a href="mailto:yanbing.chen@wisc.edu"><i class="fa fa-envelope"></i></a>
+                <a href="https://github.com/esstherc"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/Essstherccc"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/yanbingc/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p style="margin-top: 20px; color: #666;">Copyright &copy; 2026 Yanbing Chen.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="libs/bootstrap/jquery.min.js"></script>
+    <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- Scroll reveal -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -30px 0px'
+            });
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+
+</body>
+
+</html>
