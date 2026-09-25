@@ -1,231 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <meta name="description" content="Portfolio of Yanbing Chen - Spatial UI/UX Designer">
-    <meta name="author" content="Yanbing Chen">
-    <title>Selected Works | Yanbing Chen</title>
-
-    <!-- Bootstrap -->
-    <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Fontawesome -->
-    <link href="libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
-    <link href="libs/fontawesome/css/brands.min.css" rel="stylesheet" />
-    <link href="libs/fontawesome/css/solid.min.css" rel="stylesheet" />
-
-    <!-- Industrial Styles -->
-    <link href="css/style-industrial.css" rel="stylesheet">
-    <link href="css/casestudy.css" rel="stylesheet">
-    <link rel="shortcut icon" href="assets/icon.png">
-
-    <style>
-        .filter-hidden {
-            display: none !important;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yanbing Chen is a geography researcher working across cartography, geospatial analysis, and data tools.">
+  <meta name="author" content="Yanbing Chen">
+  <meta name="theme-color" content="#f4f1e9">
+  <title>Yanbing Chen | Cartography, Geospatial Analysis, and Data</title>
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
-
-<body class="cs-page">
-
-    <!-- Navigation -->
-    <nav class="navbar-industrial">
-        <div class="nav-container">
-            <a href="index.html" class="nav-brand">Yanbing Chen</a>
-            <div class="nav-pills-container">
-                <a href="about.html" class="nav-link-ind">About</a>
-                <a href="index.html" class="nav-link-ind active">Portfolio</a>
-                <a href="https://yanbing-chen-research.notion.site/portfolio?v=1191644e076f81b085bc000c36b8c7b3"
-                    target="_blank" class="nav-link-ind">Visual Projects</a>
-                <a href="resume.html" class="nav-link-ind">Resume</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="about-hero" style="min-height: 40vh; margin-bottom: 20px; padding-top: 150px;">
-        <div class="about-intro-text">
-            <h1
-                style="font-family: var(--font-display); font-size: 4rem; font-weight: 700; color: var(--text-color); margin-bottom: 15px; letter-spacing: -1px;">
-                Selected Works
-            </h1>
-            <p style="font-size: 1.3rem; color: var(--secondary-color); font-weight: 300; max-width: 700px; margin: 0 auto; line-height: 1.6;">
-                UX Researcher &amp; Product Designer with 6+ years of experience in spatial data tools, information architecture, and cross-functional product strategy.
-            </p>
-        </div>
-    </header>
-
-    <!-- Portfolio Filters -->
-    <div class="portfolio-filters">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="ux">UX Research & Design</button>
-        <button class="filter-btn" data-filter="dataviz">Data Visualization</button>
-        <button class="filter-btn" data-filter="strategy">Product Strategy</button>
+<body>
+  <a class="skip-link" href="#work">Skip to work</a>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="wordmark" href="index.html" aria-label="Yanbing Chen, home">Yanbing Chen</a>
+      <nav aria-label="Main navigation">
+        <a href="#work" aria-current="page">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-
-    <!-- Portfolio Grid -->
-    <main class="portfolio-grid" id="portfolioGrid" style="margin-bottom: 120px;">
-
-        <!-- Project 1 -->
-        <article class="gallery-card strategy">
-            <a href="casestudy-gisphere.html" class="card-link">
-                <div class="gallery-img-wrap">
-                    <img src="assets/case%20study/gisphere/thumbnail-1.png" alt="GISphere">
-                </div>
-                <div class="gallery-content">
-                    <div class="gallery-category">Product Strategy · 2022 &ndash; Present</div>
-                    <h3 class="gallery-title">GISphere Program Guide</h3>
-                    <p class="gallery-desc">
-                        Built a searchable database of 500+ GIS programs and 2,000+ faculty profiles for graduate applicants worldwide, pivoting the platform from a content blog to a structured decision-support tool. Reached 50,000+ users.
-                    </p>
-                    <div class="gallery-meta">
-                        <div class="meta-block">
-                            <h6>Role</h6>
-                            <p>Co-Chair & Product Lead</p>
-                        </div>
-                        <div class="meta-block" style="text-align: right;">
-                            <h6>Impact</h6>
-                            <p>50k+ Users, 500+ Programs</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="gallery-card ux">
-            <a href="casestudy-orka.html" class="card-link">
-                <div class="gallery-img-wrap" style="background: #F4F6F8;">
-                    <img src="assets/logo_orka.png" alt="Orka AI" style="object-fit: contain; padding: 40px;">
-                </div>
-                <div class="gallery-content">
-                    <div class="gallery-category">Product &amp; Operations · 2021 &ndash; 2022</div>
-                    <h3 class="gallery-title">Orka AI Hearing Aid</h3>
-                    <p class="gallery-desc">
-                        Three roles in 19 months: competitive analysis for Sequoia/Tencent fundraising, A/B testing and user journey mapping for Canada go-to-market, then building the 0-to-1 North American logistics system and catching 20+ app issues via monkey testing.
-                    </p>
-                    <div class="gallery-meta">
-                        <div class="meta-block">
-                            <h6>Role</h6>
-                            <p>Finance / Data / Product Intern</p>
-                        </div>
-                        <div class="meta-block" style="text-align: right;">
-                            <h6>Impact</h6>
-                            <p>3 Roles, 0→1 NA Logistics</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="gallery-card dataviz">
-            <a href="casestudy-neotoma.html" class="card-link">
-                <div class="gallery-img-wrap">
-                    <img src="assets/neotoma.png" alt="Taxonomy Visualization">
-                </div>
-                <div class="gallery-content">
-                    <div class="gallery-category">Data Visualization · 2025 &ndash; Present</div>
-                    <h3 class="gallery-title">Neotoma Taxonomy Browser</h3>
-                    <p class="gallery-desc">
-                        Designed and built a radial taxonomy browser for 60,000+ paleoecological records, combining grounded theory interviews (N=7), Activity Theory workflow analysis, and think-aloud usability evaluation (N=5) with mouse-tracking heatmaps.
-                    </p>
-                    <div class="gallery-meta">
-                        <div class="meta-block">
-                            <h6>Role</h6>
-                            <p>UX Design Researcher</p>
-                        </div>
-                        <div class="meta-block" style="text-align: right;">
-                            <h6>Impact</h6>
-                            <p>60k+ Records, Live Prototype</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </article>
-
-        <!-- Project 4 -->
-        <article class="gallery-card dataviz strategy">
-            <a href="casestudy-carcrash.html" class="card-link">
-                <div class="gallery-img-wrap">
-                    <img src="assets/case%20study/car-crash/Dashboard-1.jpg" alt="Wisconsin Car Crash Dashboard">
-                </div>
-                <div class="gallery-content">
-                    <div class="gallery-category">Data Visualization · 2024</div>
-                    <h3 class="gallery-title">Wisconsin Car Crash Dashboard</h3>
-                    <p class="gallery-desc">
-                        Designed a multi-view Power BI dashboard visualizing 34,688 crash records for government policymakers, with spatial, temporal, infrastructure, and weather analysis across cross-filtered views.
-                    </p>
-                    <div class="gallery-meta">
-                        <div class="meta-block">
-                            <h6>Role</h6>
-                            <p>Lead Designer</p>
-                        </div>
-                        <div class="meta-block" style="text-align: right;">
-                            <h6>Impact</h6>
-                            <p>34k+ Records, 4 Views</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </article>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-icons">
-                <a href="mailto:yanbing.chen@wisc.edu"><i class="fa fa-envelope"></i></a>
-                <a href="https://github.com/esstherc"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/Essstherccc"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/yanbingc/"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <p style="margin-top: 20px; color: #666;">Copyright © 2026 Yanbing Chen.</p>
+  </header>
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-eyebrow"><span class="eyebrow-dot"></span> Geography · Cartography · Data tools</div>
+      <div class="hero-layout">
+        <h1 id="hero-title">I make complex places <em>easier to read.</em></h1>
+        <div class="hero-side">
+          <p>Maps, research, and data products for understanding how people and places connect.</p>
+          <p class="hero-context">Yanbing Chen<br>Geography PhD researcher · UW–Madison</p>
+          <a class="arrow-link" href="#work">Meet my work <span aria-hidden="true">↓</span></a>
         </div>
-    </footer>
+      </div>
+      <div class="hero-footer"><span>Spatial data</span><span>Human questions</span><span>Useful answers</span></div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="libs/bootstrap/jquery.min.js"></script>
-    <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <section class="work-section" id="work" aria-labelledby="work-title"><div class="container"><div class="section-heading"><div><p class="kicker">01 / Experience</p><h2 id="work-title">Work</h2></div><p>Roles and collaborations behind the projects, across organizations and research teams.</p></div><div class="work-list">
+      <article class="work-item"><div class="work-name"><span>01</span><h3>China TravelSky Inc.</h3><p>Product and AI workflows · 2026</p></div><div><p>Built an LLM/RAG travel assistant with 90.45% answer accuracy, automated DAU and conversion reporting with SQL and Python, and developed a PyTorch LSTM for seven-day DAU forecasting.</p><span class="work-note">Industry internship</span></div></article>
+      <article class="work-item"><div class="work-name"><span>02</span><h3>Neotoma</h3><p>Scientific data tools · 2025 to present</p></div><div><p>Queried AWS-hosted PostgreSQL data in DBeaver to precompute taxonomy paths across 60,000+ records; analyzed mouse-tracking sessions to find points of user confusion and guide interface improvements.</p><a href="casestudy-neotoma.html">Read the case <span aria-hidden="true">↗</span></a></div></article>
+      <article class="work-item"><div class="work-name"><span>03</span><h3>GISphere</h3><p>Program discovery and community · 2022 to present</p></div><div><p>Structured information on 500+ GIS programs into a searchable guide; used student survey findings and contributor feedback to prioritize discovery features and coordinate a global volunteer team.</p><a href="casestudy-gisphere.html">Read the case <span aria-hidden="true">↗</span></a></div></article>
+      <article class="work-item"><div class="work-name"><span>04</span><h3>Orka</h3><p>Product and operations · 2021 to 2022</p></div><div><p>Analyzed user and launch data for an AI hearing aid; ran online split tests of email subject lines and ad-platform messaging to inform Canadian market positioning.</p><a href="casestudy-orka.html">Read the case <span aria-hidden="true">↗</span></a></div></article>
+    </div></div></section>
 
-    <script>
-        // Simple filter logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const buttons = document.querySelectorAll('.filter-btn');
-            const cards = document.querySelectorAll('.gallery-card');
 
-            buttons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Remove active from all buttons
-                    buttons.forEach(b => b.classList.remove('active'));
-                    // Add active to clicked
-                    btn.classList.add('active');
+    <section class="projects-section container" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div><p class="kicker">02 / Selected work</p><h2 id="projects-title">Projects</h2></div>
+        <p>Selected case studies across geospatial analysis, research, and useful tools.</p>
+      </div>
+      <div class="filter-bar" role="group" aria-label="Filter projects">
+        <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-button" type="button" data-filter="ai-data" aria-pressed="false">AI &amp; Data</button>
+        <button class="filter-button" type="button" data-filter="maps" aria-pressed="false">Maps</button>
+        <button class="filter-button" type="button" data-filter="products" aria-pressed="false">Products</button>
+      </div>
+      <p class="filter-status visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
+      <div class="project-grid" id="project-grid">
+        <article class="project-card featured" data-categories="ai-data maps" id="wildfire">
+          <a class="card-link" href="https://github.com/GeoDS/OASIS_wildfire" target="_blank" rel="noopener noreferrer" aria-label="Wildfire analysis agent, open project repository">
+            <div class="card-art art-fire"><img src="assets/firescope.png" alt="FireScope interface showing a wildfire map, source legend, analysis panels, and conversation" width="1600" height="697"><span class="image-label">Research interface</span></div>
+            <div class="card-content"><p class="card-type">AI &amp; Data / Maps <span>2026</span></p><h3>Wildfire analysis agent</h3><p>Turns open ended wildfire questions into explicit spatial analyses, maps, and source aware answers.</p><span class="card-cta">Explore project <span aria-hidden="true">↗</span></span></div>
+          </a>
+        </article>
+        <article class="project-card" data-categories="ai-data" id="course-evaluation">
+          <a class="card-link" href="https://onlinelibrary.wiley.com/doi/10.1111/tgis.70289" target="_blank" rel="noopener noreferrer" aria-label="GIS curriculum analysis, read published paper">
+            <div class="card-art art-courses"><div class="number-figure" aria-label="532 courses across 57 programs"><strong>532</strong><span>course descriptions</span><i></i><small>57 programs · 306 GIS&amp;T topics</small></div></div>
+            <div class="card-content"><p class="card-type">AI &amp; Data <span>2026</span></p><h3>GIS curriculum analysis</h3><p>Used text analysis and visual analytics to compare what professional GIS programs teach. First author research.</p><span class="card-cta">Read the paper <span aria-hidden="true">↗</span></span></div>
+          </a>
+        </article>
+        <article class="project-card" data-categories="ai-data maps" id="multiscale">
+          <div class="card-art art-multiscale" aria-hidden="true"><div class="map-annotation"><span>Scale changes what a map can show.</span><i>Raster → vector → detail</i></div></div>
+          <div class="card-content"><p class="card-type">Data / Maps <span>2024 to 2025</span></p><h3>Multiscale map rendering</h3><p>Research on raster to vector pipelines and levels of detail for exploring large spatial datasets in a browser.</p><span class="card-note">Research work · UW–Madison</span></div>
+        </article>
+        <article class="project-card" data-categories="maps products" id="gis-masters-map">
+          <a class="card-link" href="https://yanbingchen.site/GIS-master-webmap/" target="_blank" rel="noopener noreferrer" aria-label="U.S. GIS master's programs map, open interactive map">
+            <div class="card-art art-programs"><div class="map-annotation"><span>GIS graduate programs, mapped.</span><i>Find · compare · save</i></div></div>
+            <div class="card-content"><p class="card-type">Maps / Products <span>2026</span></p><h3>U.S. GIS master's map</h3><p>An interactive guide for comparing graduate programs by place, focus, and format, with saved lists and notes.</p><span class="card-cta">Open the map <span aria-hidden="true">↗</span></span></div>
+          </a>
+        </article>
+        <article class="project-card" data-categories="products" id="litlog">
+          <a class="card-link" href="https://chromewebstore.google.com/detail/lit-log/jmifjgddpcepkgfifibfmhblipbbbepp" target="_blank" rel="noopener noreferrer" aria-label="LitLog, open Chrome Web Store listing">
+            <div class="card-art art-litlog"><div class="litlog-visual" aria-hidden="true"><span>LitLog</span><i>Read · collect · return</i></div></div>
+            <div class="card-content"><p class="card-type">Products <span>2026</span></p><h3>LitLog</h3><p>A Chrome extension that helps researchers capture papers, citations, and notes without losing their place.</p><span class="card-cta">See the extension <span aria-hidden="true">↗</span></span></div>
+          </a>
+        </article>
+        <article class="project-card" data-categories="ai-data maps" id="coastal-exposure">
+          <div class="card-art art-coast" aria-hidden="true"><div class="map-annotation"><span>Where does rising water meet the built city?</span><i>5 coastal cities · 2100 scenarios</i></div></div>
+          <div class="card-content"><p class="card-type">Data / Maps <span>2026</span></p><h3>Coastal flood exposure</h3><p>A Google Earth Engine analysis of built area and population exposure under sea level rise scenarios.</p><span class="card-note">Research analysis · methodology in progress</span></div>
+        </article>
+        <article class="project-card" data-categories="ai-data maps" id="crash-dashboard">
+          <a class="card-link" href="casestudy-carcrash.html" aria-label="Wisconsin crash dashboard, read case study">
+            <div class="card-art art-dashboard"><img src="assets/case%20study/car-crash/Dashboard-1.jpg" alt="Wisconsin crash dashboard with map and linked data views" loading="lazy"></div>
+            <div class="card-content"><p class="card-type">Data / Maps <span>2024</span></p><h3>Wisconsin crash dashboard</h3><p>Four linked views reveal spatial, temporal, road, and weather patterns in 34,688 crash records.</p><span class="card-cta">Read the case <span aria-hidden="true">↗</span></span></div>
+          </a>
+        </article>
+        <article class="project-card" data-categories="maps" id="bittersweet">
+          <a class="card-link" href="https://yanbingchen.site/bittersweet-journey/site/index.html?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Land, Made Visible, open interactive reading atlas">
+            <div class="card-art art-bittersweet"><img src="assets/land-made-visible.png" alt="Interactive reading atlas with a map of China and story locations" loading="lazy"></div>
+            <div class="card-content"><p class="card-type">Maps <span>Story map</span></p><h3>Land, Made Visible</h3><p>An interactive reading atlas of Yu Qiuyu’s A Bittersweet Journey Through Culture, with stories revealed across a map of China.</p><span class="card-cta">Open the story <span aria-hidden="true">↗</span></span></div>
+          </a>
+        </article>
+      </div>
+      <div class="more-maps" id="more-maps"><p class="kicker">More cartography</p><div><a href="https://geography.wisc.edu/madgeognews/2025/10/31/from-a-playlist-to-an-award-winning-lyrical-map/" target="_blank" rel="noopener noreferrer">Lyriscape of Cantopop <span aria-hidden="true">↗</span></a><a href="https://yanbingchen.site/Van-Gogh-Style-Basemap/explainer/" target="_blank" rel="noopener noreferrer">Turning Starry Night into a Map <span aria-hidden="true">↗</span></a><a href="assets/map/geog370-final-project.png">To Educate or to Incarcerate? <span aria-hidden="true">↗</span></a></div></div>
+    </section>
 
-                    const filter = btn.getAttribute('data-filter');
-
-                    cards.forEach(card => {
-                        if (filter === 'all') {
-                            card.classList.remove('filter-hidden');
-                        } else {
-                            if (card.classList.contains(filter)) {
-                                card.classList.remove('filter-hidden');
-                            } else {
-                                card.classList.add('filter-hidden');
-                            }
-                        }
-                    });
-                });
-            });
-        });
-    </script>
+    <section class="contact-section container" id="contact" aria-labelledby="contact-title"><p class="kicker">03 / Contact</p><h2 id="contact-title">Let's talk about<br>useful tools.</h2><p>Interested in AI, geospatial systems, data, or product work? Get in touch.</p><div class="contact-links"><a class="email-link" href="mailto:yanbing.chen@wisc.edu">yanbing.chen@wisc.edu <span aria-hidden="true">↗</span></a><a href="https://github.com/esstherc" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/yanbingc/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></section>
+  </main>
+  <footer class="site-footer container"><span>© 2026 Yanbing Chen</span><a href="#top">Back to top ↑</a></footer>
+  <script src="js/portfolio.js" defer></script>
 </body>
-
 </html>
